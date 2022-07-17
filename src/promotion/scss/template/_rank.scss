@@ -1,0 +1,287 @@
+.rank {
+
+    margin: 0px 0 0;
+    
+    // &__nav {
+
+    //     margin: 0 0 10px;
+
+    //     .nav {
+    //         display: flex;
+    //         justify-content: center;
+
+    //         li {
+    //             margin: 0 auto;
+                
+    //             a {
+    //                 display: flex;
+    //                 color: #FFF;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 align-content: center;
+    //                 font-size: 24px;
+    //                 font-weight: bold;
+
+    //                 @include sprite($rank-tab);
+
+    //                 @include grid-media($xs, $portrait) {
+    //                     @include sprite($mb-rank-tab);   
+    //                 }
+
+    //                 &:hover, &.active {
+    //                     @include sprite($rank-tab-act);
+
+    //                     @include grid-media($xs, $portrait) {
+    //                         @include sprite($mb-rank-tab-act);   
+    //                     }
+
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    &__filter {
+        position: absolute;
+        top: 38px;
+        right: 300px;
+        @include grid-media($portrait) {
+            position: static;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__table {
+        font-size: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 2px solid #FFF;
+        background: #FFF;
+
+        th, td {
+            vertical-align: middle;
+            padding: 12px;
+            text-align: center;
+        }
+
+        td {
+            height: 60px;
+            // color: #505050;
+            border: 2px solid #FFF;
+            position: relative;
+            font-weight: lighter;
+        }
+
+        thead {
+            th {
+                height: 65px;
+                background: #ff2f6a;
+                color: #fff;
+                text-transform: uppercase;
+                border: 2px solid #FFF;
+            }
+        }
+
+        tbody {
+            tr {
+                position: relative;
+                // margin: 2px 0 0; 
+                border: 2px solid #FFF;
+                // z-index: 10;
+                &.rank-1, 
+                &.rank-2, 
+                &.rank-3 {
+                    // &:after {
+                    //     content: "";
+                    //     display: block;
+                    //     width: calc(100% - 12px);
+                    //     height: calc(100% - 4px);
+                    //     background: rgba(#fff, .5);
+                    //     position: absolute;
+                    //     border-radius: 50px;
+                    //     top: 2px;
+                    //     left: 8px;
+                    //     z-index: -2;
+                    // }
+
+                    // td:first-child {
+                    //     color: #FFF;
+                    //     &:before {
+                    //         content: "";
+                    //         display: block;
+                    //         width: 50px;
+                    //         height: 50px;
+                    //         background: rgba(#ff7e7e, 1);
+                    //         position: absolute;
+                    //         border-radius: 50px;
+                    //         top: calc(50% - 50px /2);
+                    //         left: calc(50% - 50px /2);
+                    //         z-index: -1;
+                    //     }
+                    // }
+
+                }
+            }
+
+            tr {
+                // td:first-child {
+                //     font-sizE: 24px;
+                //     font-style: italic;
+                // }
+                &:nth-child(odd) {
+                    background: #f3f8ff;
+                }
+                &:nth-child(even) {
+                    background: #dfebff;
+                }
+            }
+        }
+    }
+
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+
+    .page-item {
+        display: block;
+        margin: 0 4px;
+        min-width: 32px;
+
+        .page-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            padding: 12px 18px;
+            border: 2px solid #c7ddfb;
+            background: transparent;
+            color: #FFF;
+            border-radius: 8px;
+            font-size: 24px;
+            min-width: 32px;
+        }
+
+        &:not(.active):hover {
+            .page-link {
+                background: #ff2f6a;
+            }
+        }
+
+        &.active {
+            .page-link {
+                background: #ff2f6a;
+                border: 2px solid #ff2f6a;
+            }
+        }
+    }
+}
+
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+        background: #000;
+        border: 2px solid #4548d6;
+        padding: 0px 10px 0 30px;
+        margin: 0 0 20px 0;
+        height: 55px;
+        color: #FFF;
+        font-size: 30px;
+        font-weight: lighter;
+        border-radius: 30px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        @include grid-media($portrait) {
+                
+            &:nth-child(1) {
+                order: 1;
+                width: 50%;
+            }
+            &:nth-child(3) {
+                order: 2;
+                width: 48%;
+            }
+            &:nth-child(2) {
+                order: 3;
+                width: 32%;
+            }
+            &:nth-child(4) {
+                order: 4;
+                width: 32%;
+            }
+            &:nth-child(5) {
+                order: 5;
+                width: 32%;
+            }
+
+        }
+
+        input, 
+        select {
+            color: #FFF;
+            font-size: 30px;
+            font-weight: lighter;
+            border: none;
+            height: 100%;
+            // padding: 8 10;
+        }
+
+        select {
+            background: transparent url(../assets/images/dropdown-light.png);
+            background-repeat: no-repeat;
+            background-position-x: calc(100% - 10px);
+            background-position-y: calc(50% + 0px);
+            padding-right: 50px;
+        }
+
+        
+
+        .list-gender {
+            display: flex;
+
+            input {
+                visibility: hidden;
+                &:checked + label {
+                    color: #ffdd00;
+                    &:before {
+                        content: "";
+                        @include sprite($input-radio-checked);
+                    }
+                }
+            }
+
+            label {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                position: relative;
+                grid-area: 1;
+                font-weight: lighter;
+                margin: 0 20px;
+                &:before {
+                    content: "";
+                    @include sprite($input-radio);
+                    margin-right: 4px;
+                }
+            }
+
+            .icon-male {
+                // @include sprite($option-king);
+            }
+            .icon-female {
+                // @include sprite($option-queen);
+            }
+        }
+
+    }
+}

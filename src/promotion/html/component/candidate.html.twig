@@ -1,0 +1,111 @@
+<div class="candidates">
+<div class="candidates__search">
+
+    <input type="text" placeholder="Tìm thí sinh theo số báo danh">
+    <button class="btni btni--magnify">Tìm</button>
+
+</div>
+<div class="candidates__filter">
+    <ul class="filter">
+        <li>
+            <div class="list-gender">
+                <input type="radio" name="data[sort]" id="top" class="input-hidden"/>
+                <label class="icon-top" for="top">
+                    Dẫn đầu
+                </label>
+                <input type="radio" name="data[sort]" id="random" class="input-hidden"/>
+                <label class="icon-random" for="random">
+                    Ngẫu nhiên
+                </label>
+            </div>
+        </li>
+        <li>
+            <select name="data[gender]" id="gender">
+                <option value="">Nam &amp; Nữ</option>
+                <option value="">Nam </option>
+                <option value="">Nữ </option>
+            </select>						
+        </li>
+        <li>
+            <select name="data[game]" id="game">
+                <option value="">Võ lâm truyền kỳ 1 Mobile</option>
+            </select>						
+        </li>
+        <li>
+            <select name="data[server]" id="server">
+                <option value="">S106 - Diệu Phụng</option>
+            </select>						
+        </li>
+        <li>
+            <select name="data[area]" id="area">
+                <option value="">Miền Nam</option>
+            </select>						
+        </li>
+    </ul>
+</div>
+<div class="candidates__detail">
+
+    <ul class="candidates__list">
+        {% for item in 1..8 %}
+            <li>
+                <a href="#" class="candidate__item">
+                    <div class="candidate__thumbnail">
+                        <img src="assets/images/data/profile-{{item}}.png" alt="Nguyễn Trần Mạnh Hoàng ">
+                     
+                        <div class="candidate__score">
+                            <div class="candidate__vote">
+                                <span class="vote">18999</span>
+                            </div>
+                            <div class="candidate__rank">
+                                <span class="rank">18999</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+                    <div class="candidate__character">
+                        <span class="candidate__ingame">HacLong</span>
+                        <span class="candidate__id">#2123</span>
+                    </div>
+                    <hr>
+                    <div class="candidate__description">
+                        <span class="candidate__game">Võ lâm truyền kỳ 1 Mobile</span>
+                        |
+                        <span class="candidate__server">S103</span>
+                    </div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <nav>
+        <ul class="pagination">
+            <li class="page-item">
+                <a class="page-link" href="" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                    {# <span class="sr-only">Prev</span> #}
+                </a>
+            </li>
+            <li class="page-item ">
+                <a class="page-link" href="">1</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link" href="">2</a>
+            </li>
+            <li class="page-item ">
+                <a class="page-link" href="">3</a>
+            </li>
+            <li class="page-item ">
+                <a class="page-link" href="">4</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                    {# <span class="sr-only">Next</span> #}
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+</div>
+
+</div>

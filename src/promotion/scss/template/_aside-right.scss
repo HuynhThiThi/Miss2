@@ -1,0 +1,83 @@
+
+.aside_right { 
+    position: fixed;
+    top: calc(50% - 712px / 2);
+    width: 222px;
+    height: 712px;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    background-image: url(../assets/images/right-bg.png);
+    background-repeat: no-repeat;
+    padding: 210px 10px 15px 80px;
+
+    right: -90px;
+    transition: all .2s;
+
+    @include grid-media($xs, $sm, $portrait) {
+        display: none;
+    }
+    
+    li {
+        // width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin: 0 4px;
+        // opacity: .5;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            font-size: 0px;
+
+            &:hover {
+                filter: brightness(110%);
+            }
+
+            &.off {
+                filter: grayscale(100%);
+            }
+
+            
+        }
+    }
+
+    &__item {
+        &--toggle {    
+            position: absolute;
+            top: 200px;
+            left: 55px;
+            // transform: scaleX(-1);
+            @include sprite($right-open);
+            &:hover {
+                filter: brightness(110%);
+                // @include sprite($side-toggle-hov);
+            }
+        }
+
+        $rightCode: "appicon", "facebook", "youtube", "downloadappstore", "downloadandroid", "downloadapk", "downloadpc", "topup";
+        $rightItem: $right-appicon, $right-facebook, $right-youtube, $right-appstore, $right-android, $right-apk, $right-pc, $right-topup;
+        $i: 1;
+
+        @each $code in $rightCode {
+            &--#{$code} {
+                @include sprite(nth($rightItem, $i));
+
+                $i: $i + 1;  
+            }
+        }
+    }
+
+    &.active {
+        right: 20px;
+        .aside_right__item--toggle {
+            // transform: scaleX(1);
+            @include sprite($right-close);
+        }
+    }
+}

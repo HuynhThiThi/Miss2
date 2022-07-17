@@ -1,0 +1,100 @@
+
+.aside_left { 
+    position: fixed;
+    top: calc(50% - 434px / 2);
+    width: 173px;
+    height: 360px;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+
+    // background-image: url(../assets/images/left-bg.png);
+    // background-repeat: no-repeat;
+    // padding: 100px 0px 40px 0px;
+
+    left: -90px;
+    transition: all .2s;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1px; 
+        height: 90%;
+
+        background: #dcdcdc;
+        left: 20px;
+        z-index: -1;
+    }
+
+    @include grid-media($xs, $sm, $portrait) {
+        display: none;
+    }
+    
+    li {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin: 0 4px;
+        padding-left: 0px;
+
+        &:not(:first-child) {
+            padding-left: 14px;
+        }
+        // opacity: .5;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 0 10px;
+            // @include gradientText( #faefd2, #fff);
+            text-transform: uppercase;
+            text-align: center;
+            justify-content: center;
+            height: 70px;
+
+            &:hover {
+                // @include gradientText( #ffe6a0, #fff2cd);
+            }
+
+            &.off {
+                filter: grayscale(100%);
+            }
+
+            
+        }
+        
+        $leftCode: "left-home", "left-1", "left-2", "left-3", "left-4", "left-5";
+        $leftItem: $left-home, $left-1, $left-2, $left-3, $left-4, $left-5;
+        $leftItemHov: $left-home, $left-1-hov, $left-2-hov, $left-3-hov, $left-4-hov, $left-5-hov;
+        $i: 1;
+
+        @each $code in $leftCode {
+            &:nth-child(#{$i}) {
+                a {
+                    @include sprite(nth($leftItem, $i));
+    
+                    &:hover {
+                        @include sprite(nth($leftItemHov, $i));
+                    }
+                }
+
+                $i: $i + 1;  
+            }
+        }
+    }
+
+    &.active {
+        left: 20px;
+        // .aside__item--toggle {
+        //     // transform: scaleX(1);
+        //     @include sprite($side-toggle);
+        // }
+    }
+}

@@ -1,0 +1,114 @@
+.candidate {
+
+    &__hr {
+        border-color: #9c7aff;
+    }
+    &__meta {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 50px;
+
+    }
+
+    &__statics {
+        ul {
+            // background: #4200ff; 
+            border: 2px solid #FFF;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            width: fit-content;
+
+
+            li {
+                &:not(:last-child){
+                    border-right: 2px solid #FFF;
+                }
+            }
+        }
+    }
+
+
+    &__label {
+        padding: 10px 20px;
+        background: #4200ff; 
+        border-bottom: 2px solid #FFF;
+        color: #FFF;
+        font-size: 30px;
+        text-align: center;
+        font-weight: lighter;
+    }
+    &__value {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        background: #dfebff;
+        font-weight: bold;
+        color: #060b39;
+        font-size: 45px;
+        text-align: center;
+    }
+
+    &__video {
+
+    }
+
+    &__action {
+        p {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            margin-bottom: 0px;
+            strong {
+                margin-left: 20px;
+                font-size: 45px;
+                font-weight: bold;
+                color: #ffdd00;
+                display: flex;
+                align-items: center;
+                align-content: center;
+            }
+        }
+
+        .btni--action {
+            display: inline-flex; 
+            margin-left: 20px;
+        }
+    }
+
+    &__vote_adjustment {
+        display: inline-flex;
+        background: #dfebff;
+        padding: 5px;
+        border-radius: 30px;
+        margin-top: 10px;
+        width: fit-content;
+
+        input[type="number"] {
+            margin: 0 10px;
+            padding: 0 10px;
+            border: none;
+            background: transparent;
+            text-align: center;
+            font-size: 34px;
+            color: #060b39;
+            width: 120px;
+        }
+
+        .btni {
+            display: block;
+            background: transparent;
+            border: none;
+            &--sub {
+                @include sprite($input-sub);
+            }
+            &--add {
+                @include sprite($input-add);
+            }
+        }
+    }
+}

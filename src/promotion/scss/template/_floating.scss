@@ -1,0 +1,173 @@
+.navigation {
+    position: fixed;
+    top: calc(50% - 275px / 2);
+    left: 35px;
+
+    width: 50px;
+    height: 275px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+
+    // background-image: url(../assets/images/bg-floatingleft.png);
+    // background-repeat: no-repeat;
+    // background-
+
+
+    @include grid-media($xs, $sm, $portrait) {
+
+        display: none;
+
+        background: none;
+        width: 768px;
+        height: 104px;
+        left: 0;
+        bottom: 0;
+        top: auto; 
+    }
+    
+    li {
+        width: 100%;;
+        a {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            color: #FFF;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.9);
+
+            padding: 0 10px;
+            text-align: center;
+            line-height: 24px; 
+
+            font-size: 0px;
+
+            &:not(.off):hover {
+                // color: #ffdb6e;
+                // z-index: 10;
+            }
+
+            &.off {
+                color: rgba(#FFF, .5);
+                text-shadow: initial;
+                filter: grayscale(0%);
+            }
+
+            
+        }
+    }
+
+    &__item {
+        position: relative;
+        &--1 {
+            @include sprite($home);
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.1);
+                @include sprite($home-hov);
+            }
+
+            @include grid-media($xs, $sm, $portrait) {
+                // @include sprite($mb-nav-1);
+                // &:hover {
+                //     @include sprite($mb-nav-1);
+                // }
+            }
+        }
+        &--2 {
+            @include sprite($scrollspy);
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.1);
+                @include sprite($scrollspy-active);
+            }
+
+            @include grid-media($xs, $sm, $portrait) {
+                // @include sprite($mb-nav-2);
+                // &:hover {
+                //     @include sprite($mb-nav-2);
+                // }
+            }
+        }
+        &--3 {
+            @include sprite($scrollspy);
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.1);
+                @include sprite($scrollspy-active);
+            }
+
+            @include grid-media($xs, $sm, $portrait) {
+                // @include sprite($mb-nav-3);
+                // &:hover {
+                //     @include sprite($mb-nav-3);
+                // }
+            }
+        }
+        &--4 {
+            @include sprite($scrollspy);
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.1);
+                @include sprite($scrollspy-active);
+            }
+
+            @include grid-media($xs, $sm, $portrait) {
+                // @include sprite($mb-nav-4);
+                // &:hover {
+                //     @include sprite($mb-nav-4);
+                // }
+            }
+        }
+        &--5 {
+            @include sprite($scrollspy);
+            transition: transform .2s;
+            &:hover {
+                transform: scale(1.1);
+                @include sprite($scrollspy-active);
+            }
+
+            @include grid-media($xs, $sm, $portrait) {
+                // @include sprite($mb-nav-4);
+                // &:hover {
+                //     @include sprite($mb-nav-4);
+                // }
+            }
+        }
+
+        // &--1 {
+        //     margin-top: -30px;
+        //     margin-bottom: 20px;
+        // }
+
+        &--1, &--2, &--3, &--4 {
+            &:after {
+                content : "";
+                display: block;
+                position: absolute; 
+                top: 100%;
+                left: calc(50% - 5px / 2);
+                @include sprite($scrollspy-connect);
+            }
+        }
+
+        &--1, &--2, &--3, &--4, &--5 {
+            margin: 0 auto 21px;
+            @include grid-media($xs, $sm, $portrait) {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        }
+
+    }
+}
+
+
+

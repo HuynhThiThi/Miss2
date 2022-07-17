@@ -1,0 +1,30 @@
+<div id="menu" class="menu">
+	<ul>
+		<li class="search">
+			<form>
+				<input class="input-text" placeholder="Tìm kiếm thí sinh" type="text">
+				<input class="btn-submit" type="submit" value="Submit">
+			</form>
+		</li>
+		<li>
+			<a href="javascript:void(0);" class="menu__mission">NHIỆM VỤ NHẬN TIM</a>
+			<ul>
+				<li><a href="#" class="pm__menu-">Đăng nhập để bình chọn<br/>(+3 tim)</a></li>
+				<li><a href="#" class="pm__menu-">Điểm danh đăng nhập<br/>(+1 tim mỗi ngày)</a></li>
+				<li><a href="#" class="pm__menu-">Tài khoản đạt level 30<br/>(+1 tim)</a></li>
+				<li><a href="#" class="pm__menu-">Tài khoản đạt level 50<br/>(+2 tim)</a></li>
+				<li><a href="#" class="pm__menu-">Tài khoản đạt level 65<br/>(+5 tim)</a></li>
+				<li><a href="#" class="pm__menu-">Tài khoản đạt level 70<br/>(+5 tim)</a></li>
+				<li><a href="#" class="pm__menu-">Nạp tích lũy<br/>(+1 tim cho mỗi 50k nạp)</a></li>
+				<li><a href="#" class="pm__menu-">Chia sẻ lên tường bạn công khai<br/>(+1 tim)</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" class="menu__history  pm__menu-history">LỊCH SỬ NHẬN TIM</a>
+		</li>
+		<li>
+			<!--<a href="#" class="menu__login  pm__menu-login">LOGIN</a>-->
+			{% include "./auth.html.twig" %}
+		</li>
+	</ul>
+</div>

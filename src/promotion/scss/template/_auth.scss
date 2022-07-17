@@ -1,0 +1,40 @@
+.auth {
+    position: absolute;
+    top: 266px;
+    left: calc(50% - 462px);
+    padding: 0 20px;
+    width: 570px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include grid-media($xs, $portrait) {
+        top: 323px;
+        left: calc(50% - 570px / 2); 
+    }
+
+    &__profile {
+        color: #ebbebe;
+
+        font-size: 18px;
+        font-weight: 200;
+
+        .username {
+            font-weight: bold; 
+            color: #ffbd0b;
+        }
+
+    }
+    &__info {
+        color: #ebbebe;
+
+        font-size: 18px;
+        font-weight: 200;
+
+        .point {
+            font-weight: bold; 
+            color: #ffbd0b;
+        }
+    }
+}

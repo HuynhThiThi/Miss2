@@ -1,0 +1,247 @@
+.article {
+  font-size: 16px;
+  color: #212226;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 200px;
+  }
+
+  &__title, h1 {
+      font-size: 1.8em;   
+      font-weight: bold;
+      line-height: 1.4;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #eee; 
+      color: #ff2f6a;    
+      text-align: center;
+      font-family: Arsenal;
+
+  }
+
+  &__meta {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 16px 0;
+  }
+
+  &__cate {
+      display: block;
+      padding: 12px;
+      margin-right: 12px;
+      color: #111;
+      background: #ddd;
+      border-radius: 4px;
+      font-size: .8em;
+  }
+
+  &__time {
+      color: #888;
+      font-size: .8em;
+  }
+}
+
+
+.article {
+  &__content {
+      font-size: 1em;
+      color: #222;
+      line-height: 1.4;
+      *:not(:only-child):not(li) {
+          margin-bottom: 12px;
+      }
+
+      // UL
+
+      ul {
+          margin-left: 20px;
+          li {
+              list-style-position: outside;
+              margin-bottom: 6px;
+
+              // ul {
+              //     margin-left: 20px;
+              // }
+
+          }
+
+          &, &.bulleted {
+              li {
+                  list-style-type: disc;
+              }
+          }
+
+          &.numbered {
+              li {
+                  list-style-type: decimal;
+              }
+          }
+      }
+
+      // TITLE
+
+      h2 {
+          font-size: 1.4em;   
+          font-weight: bold;
+          line-height: 1.4;
+          color: #ff2f6a;
+          &:before {
+              content: "";
+              @include sprite($article-title);
+          }
+      }
+
+      h3 {
+          font-size: 1.3em;   
+          font-weight: bold;
+          line-height: 1.4;
+          color: #4200ff;
+          &:before {
+              content: "";
+              @include sprite($article-subtitle);
+          }
+      }
+
+      h4 {
+          font-size: 1.2em;   
+          font-weight: bold;
+          line-height: 1.4;
+          color: #ff2f6a;
+      }
+
+      h5 {
+          font-size: 1.1em;   
+          font-weight: bold;
+          line-height: 1.4;
+          color: #4200ff;
+      }
+
+      h6 {
+          font-size: 1em;   
+          font-weight: bold;
+          line-height: 1.4;
+          color: #ff2f6a;
+      }
+
+      p {
+
+      }
+
+      a {
+          color: #4579c9;
+          text-decoration: none;
+          border-bottom: 1px solid transparent;
+          transition: border-bottom .4s;
+
+          &:hover {
+              border-bottom: 1px solid #0000FF;
+          }
+      }
+
+      a.hero {
+          display: block;
+          background: rgba(#4579c9, .05);
+          color: #4579c9;
+          font-weight: bold;
+          padding: 20px;
+          border: 0px;
+      }
+
+
+      // IMG + IFRAME
+
+      img, iframe {
+          display: block;
+          max-width: calc(100% );
+          margin: 0 auto 12px;
+      }
+
+      img + p.caption, iframe + p.caption {
+          display: block;
+          max-width: calc(100% - 20px * 2);
+          margin: 0 auto 12px;
+          font-style: italic;
+          font-size: .8em;
+          color: #444;
+          text-align: center;
+      }
+
+      img.float {
+          &, &--left {
+              float: left;
+              margin-right: 20px;
+          }
+          &--right {
+              float: right;
+              margin-right: 0px;
+              margin-left: 20px;
+          }
+      }
+
+      // CALLOUT
+
+      .callout {
+          padding: 20px 20px;
+          background: #4579c9;
+          color: #FFF;
+
+      }
+
+      // TABLE
+
+      .table {
+          width: 100%;
+
+          @include grid-media($xs, $portrait) {
+
+              overflow: auto;
+          }
+      }
+
+      table {
+          width: 100%;
+          td {
+              padding: 8px;
+              border: 1px solid #ccc;
+              vertical-align: middle;
+              img {
+                  max-width: 100%;
+                  margin: 0 auto 0;
+              }
+          }
+          thead {
+              background: #ff2f6a;
+              color: #FFF;
+              font-weight: bold;
+              tr {
+                  th {
+                      padding: 12px;
+                      text-align: center;
+                      vertical-align: middle;
+                  }
+              }
+          }
+          tbody {
+              tr {
+                  td {
+                      
+                  }
+              }
+          }
+          tfoot {
+              background: #ff2f6a;
+              color: #fff;
+              tr {
+                  td {
+                      
+                  }
+              }
+          }
+      }
+
+  }
+}

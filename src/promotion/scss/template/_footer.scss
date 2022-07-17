@@ -1,0 +1,47 @@
+.frame4 {
+	&__inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		// flex-wrap: wrap;
+		align-self: center;
+
+		@include grid-media($xs, $portrait) {
+			flex-wrap: wrap;
+			padding: 20px 0 0;
+		}
+
+		&:before {
+			content: "";
+			display: block;
+			@include sprite($footer-logo);
+			margin-right: 24px;
+
+			@include grid-media($xs, $portrait) {
+				// transform: scale(1.3);
+				margin-right: 0px;
+				margin-bottom: 24px;
+			}
+		}
+
+		p {
+			display: block;
+			width: calc(100% - 330px); 
+			font-size: 16px;
+			line-height: 1.6; 
+			text-align: left;
+			color: #8c8c8c;
+			margin-top: 12px;
+			margin-bottom: 12px;
+			font-family: RobotoCondensed;
+
+			@include grid-media($xs, $portrait) {
+				font-size: 24px;
+				text-align: center;
+				width: 100%;
+			}
+		}
+
+	}
+} 

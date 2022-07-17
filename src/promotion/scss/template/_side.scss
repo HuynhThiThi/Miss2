@@ -1,0 +1,169 @@
+.side {
+    position: absolute;
+    top: 160px;
+    left: calc(50% + 180px);
+
+    @include grid-media($xs, $portrait) {
+        top: 1060px;
+        left: calc(50% - 535px / 2);
+    }
+}
+
+
+.exchange {
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffe869;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin: 0 0 20px;
+
+    @include sprite($btn-exchange);
+
+    &:not(.off):hover {
+        @include sprite($btn-exchange-hov);
+    }
+
+    &.off {
+        @include sprite($btn-exchange-hov);
+    }
+
+    @include grid-media($xs, $portrait) {
+        @include sprite($mb-btn-exchange);
+
+        &.off {
+            @include sprite($mb-btn-exchange);
+        }
+    }
+}
+
+
+.winner {
+    width: 323px;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include grid-media($xs, $portrait) {
+        width: 528px;
+        height: 850px;
+    }
+    
+    &__title {
+        display: block;
+        font-size: 0px;
+        
+        @include sprite($list-title);
+
+        @include grid-media($xs, $portrait) {
+            @include sprite($mb-list-title);
+        }
+    }
+
+    &__wrapper {
+        width: 323px;
+        height: calc(100% - 30px - 53px);
+        display: block;
+        background: url(../assets/images/list-loop.png); 
+        background-repeat: repeat-y;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        iframe {    
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+        }
+
+        @include grid-media($xs, $portrait) {
+            width: 528px;
+            background: url(../assets/images/mb-list-loop.png); 
+        }
+
+
+        $bgColor: #0c1535;
+        $thumbColor: #838289;
+
+        &::-webkit-scrollbar {
+            margin-right: 6px;
+            width: 6px;
+            transition: width .2s;
+
+        }
+
+        &:hover {
+            &::-webkit-scrollbar {
+                width: 6px;
+            }
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: rgba($bgColor, .5); 
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgba($thumbColor, 1); 
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgba($thumbColor, 1); 
+        }
+
+    }
+
+    &__footer {
+        display: block;
+        font-size: 0px;
+        @include sprite($list-bottom);
+
+        @include grid-media($xs, $portrait) {
+            @include sprite($mb-list-bottom);
+        }
+    }
+
+    &__item {
+        position: relative;
+        // display: flex;
+        // justify-content: flex-start;
+        // align-items: center;
+        // align-content: center;
+        // flex-wrap: wrap;
+        width: 100%;
+        margin: 0 20px;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 20px 0px;
+        color: #abb1c5;
+
+        @include grid-media($xs, $portrait) {
+            font-size: 24px;
+            line-height: 32px;
+            padding: 20px 0px;
+        }
+
+        .username {
+            font-weight: bold;
+        }
+        .prize {
+            font-weight: bold;
+            color: #fab90b;
+        }
+
+        &:not(:last-child):before {
+            content: "";
+            display: block;
+            width: 90%;
+            height: 1px;
+            bottom: 0px;
+            position: absolute;
+            background: #26325a;
+        }
+    }
+}

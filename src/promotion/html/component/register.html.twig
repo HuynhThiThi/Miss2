@@ -1,0 +1,97 @@
+<div class="register">
+
+	<form action="#" method="post" class="block-register">
+		<fieldset>
+			<!--cot hinh anh-->
+			<div class="block-img">
+				{# <h2>Đặt ảnh đại diện của bạn</h2> #}
+				<div class="thumb-big" id="img-big">
+					<img uploadImg src="assets/images/logo-placeholder.png" class="placeholder" alt=""/>
+					<input class="upload" name="data[img-user-1]" id="img-user-1" type="file">
+					<label for="img-user-1" class="btn-upload">Thêm ảnh dự thi chính</label>
+				</div>
+				{# <p class="text-note">Upload 5 ảnh yêu thích nhất của bạn trong đó có 1 hình được chọn làm ảnh Avatar</p> #}
+				<ul class="list-upload" id="img-user">
+					<li>
+						<input class="upload" name="data[img-user-2]" id="img-user-2" type="file">
+						<img class="uploadImg" src="#" alt=""/>
+						<label for="img-user-2" class="btn-upload">Thêm ảnh phụ</label>
+					</li>
+					<li>
+						<input class="upload" name="data[img-user-3]" id="img-user-3" type="file">
+						<img class="uploadImg" src="#" alt=""/>
+						<label for="img-user-3" class="btn-upload">Thêm ảnh phụ</label>
+					</li>
+					<li>
+						<input class="upload" name="data[img-user-4]" id="img-user-4" type="file">
+						<img class="uploadImg" src="#" alt=""/>
+						<label for="img-user-4" class="btn-upload">Thêm ảnh phụ</label>
+					</li>
+				</ul>
+			</div>
+			<!--end cot hinh anh-->
+			<!--cot thong tin-->
+			<div class="block-info">
+				{# <h2>Thông tin cá nhân</h2> #}
+
+				<ul class="list-info">
+					<li>
+						<div>NHÂN VẬT: <strong>Chu_Nguyên_Chương</strong></div>
+						<div>MÁY CHỦ: <strong>S103</strong></div>
+					</li>
+					<li>
+						<div>BANG HỘI: <strong>Độc Cô Cầu Bại</strong></div>
+						{# <p class="text-note">Bạn muốn đăng ký King hay Queen ?</p> #}
+						<div class="list-gender">
+							<input type="radio" name="data[sex]" id="male" class="input-hidden"/>
+							<label class="icon-male" for="male">
+								Nhánh Nam
+							</label>
+							<input type="radio" name="data[sex]" id="female" class="input-hidden"/>
+							<label class="icon-female" for="female">
+								Nhánh Nữ
+							</label>
+						</div>
+					</li>
+					<li>
+						<input type="text" name="data[address]" placeholder="Nhập địa chỉ liên hệ nhận thưởng">
+					</li>
+					<li>
+						<input type="text" name="data[phone]" placeholder="Số Điện Thoại">
+						<select name="" id="">
+							<option value="a">Chọn khu vực</option>
+							<option value="a">Chọn khu vực</option>
+						</select>
+					</li>
+					<li>
+						<p class="text-note">Hình CMND/ Căn Cước Công Dân (mặt trước và sau)</p>
+						<ul class="list-upload2" id="img-id">
+							<li>
+								<input class="upload" name="data[img-id-front]" id="img-id-front" type="file">
+								<img class="uploadImg" src="#" alt=""/>
+								<label for="img-id-front" class="btn-upload">Chọn ảnh</label>
+							</li>
+							<li>
+								<input class="upload" name="data[img-id-back]" id="img-id-back" type="file">
+								<img class="uploadImg" src="#" alt=""/>
+								<label for="img-id-back" class="btn-upload">Chọn ảnh</label>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<textarea id="intro" name="data[intro]" row="10" placeholder="Nhập nội dung tự giới thiệu (không quá 200 kí tự)"></textarea>
+					</li>
+					<li>
+						<input type="url" name="data[url]" placeholder="Nhập link video dự thi" >
+					</li>
+				</ul>
+				<!--end cot thong tin-->
+				<div class="btn-form">
+					{# <input type="reset" class="bt-cancel" name="btnReset"> #}
+					<input type="submit" class="btni btni--submit show-thongbao" name="btnSubmit">
+				</div>
+			</div>
+		</fieldset>
+	</form>
+
+</div>

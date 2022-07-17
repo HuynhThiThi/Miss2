@@ -1,0 +1,9 @@
+.content {
+    width: 100%;
+    height: 1100px;
+    margin: 100px 0 0;
+
+    @include grid-media($xs, $portrait) {
+        margin: 240px 0 0;
+    }
+}

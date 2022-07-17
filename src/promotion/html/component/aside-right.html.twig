@@ -1,0 +1,27 @@
+<ul id="asideRight" class="desktop active aside_right floatingDesktopTopRight">
+     <li>
+        <a id="asideRightToggle" href="#" class="aside_right__item aside_right__item--toggle">
+            Đóng / Mở
+        </a>
+     </li>
+     {% set items = ["appicon", "facebook", "youtube", "downloadappstore", "downloadandroid", "downloadapk", "downloadpc", "topup"] %}
+     {% set itemsLink = [ 
+         "http://mua.zing.vn/index.html",
+         "https://www.facebook.com/mua.zing.vn/",
+         "https://www.youtube.com/channel/UCOwKDFwh74RKWjgXMVthoAg",
+         "https://itunes.apple.com/vn/app/id1439862260",
+         "https://play.google.com/store/apps/details?id=com.gs2.mua",
+         "http://mua.vcdn.vn/VNGAN.apk",
+         "http://mua.vcdn.vn/MOBIMUA.zip",
+         "https://pay.zing.vn/wplogin/mobile/mua"
+     ] %}
+     {% for item in items %}
+        <li>
+            <a href="{{itemsLink[loop.index0]}}" target="" class="aside_right__item aside_right__item--{{item}}">
+                {{item}}
+            </a> 
+        </li>
+     {% endfor %}
+</ul>
+
+

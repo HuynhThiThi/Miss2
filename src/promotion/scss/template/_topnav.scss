@@ -1,0 +1,108 @@
+.topfloat {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 100%; 
+    // background: #000;
+
+    @include grid-media($portrait) {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 210px;
+    }
+}
+
+.topnav {
+    position: absolute;
+    top: 0;
+    left: 0; 
+
+    width: 100%;
+    height: 100%; 
+    
+    // background-repeat: no-repeat;
+    // background-position: center 20px;
+    // padding: 0 20px;
+
+    // @include grid-media($xs, $portrait) {
+    //     width: 768px;
+    //     background: none;
+    //     padding: 0;
+    //     left: 0
+    // }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        align-content: center;    
+
+        @include grid-media($portrait) {
+            align-items: flex-start;
+            align-content: flex-start;    
+        }
+
+        li {
+            position: relative;
+            padding: 8px 2px;
+
+            $leftnav: $left-1, $left-2, $left-3;
+            $leftnavhov: $left-1-hov, $left-2-hov, $left-3-hov;
+            $topnav: $top-1, $top-2, $top-3;
+            $topnavhov: $top-1-hov, $top-2-hov, $top-3-hov;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    .topnav__item {
+                        @include sprite(nth($leftnav, $i));
+                        &:hover, &.active {
+                            @include sprite(nth($leftnavhov, $i));
+                        }
+                        @include grid-media($portrait) {
+                            @include sprite(nth($topnav, $i));
+                            &:hover, &.active {
+                                @include sprite(nth($topnavhov, $i));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        font-size: 0px;
+        // justify-content: center;
+        // align-items: center;
+        // align-content: center;
+        // text-align: center;
+        // line-height: 1.4;
+        // color: #FFF;
+        // font-size: 24px;
+        // @include sprite($menu);
+
+        // @include grid-media($xs, $portrait) {
+        //     @include sprite($mb-menu);
+        //     width: auto;
+        //     border: 1px solid #FFF;
+        //     font-size: 36px;
+        //     padding: 8px 12px;
+        // }
+
+        // &:hover, &.active {
+        //     @include sprite($menu-hov);
+
+        //     @include grid-media($xs, $portrait) {
+        //         @include sprite($mb-menu-hov);
+        //         width: auto;
+        //     }
+    
+        // }
+    }
+    
+}

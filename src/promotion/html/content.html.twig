@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion - Web Platform 3.0</title>
+</head>
+<body>
+
+    {# Main Components #}
+    
+    <div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
+        <section id="frame1" class="section section--frame1 frame1 scrollFrame">
+            <div class="section__background">
+                <img data-src="assets/images/bg/bg-1.jpg" class="desktop lazyload" alt="">
+                <img data-src="assets/images/bg/mb-bg-1.jpg" class="mobile lazyload" alt="">
+            </div>
+            <div class="section__content">
+                <div class="container">
+                    <div class="frame1__inner">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="frame2" class="section section--frame2 frame2 scrollFrame">
+            <div class="section__background">
+                <img data-src="assets/images/bg/bg-2.jpg" class="desktop lazyload" alt="">
+                <img data-src="assets/images/bg/mb-bg-2.jpg" class="mobile lazyload" alt="">
+            </div>
+            <div class="section__content">
+                <div class="container">
+                    <div class="frame2__inner">
+                        {# {% include "./component/menu.html.twig" %} #}
+                        <iframe class="content" src="../article/article.html" frameborder="0"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="frame3" class="section section--frame3 frame3 scrollFrame">
+            <div class="section__background">
+                <img data-src="assets/images/bg/bg-3.jpg" class="desktop lazyload" alt="">
+                <img data-src="assets/images/bg/mb-bg-3.jpg" class="mobile lazyload" alt="">
+            </div>
+            <div class="section__content">
+                <div class="container">
+                    <div class="frame3__inner"> 
+                        {% include "./component/rank.html.twig" %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="frame4" class="section section--frame4 frame4 scrollFrame">
+            <div class="section__background">
+                {# <img src="assets/images/footer-bg.jpg" class="desktop lazyload" alt=""> #}
+                {# <img src="assets/images/footer-mb-bg.jpg" class="mobile lazyload" alt=""> #}
+            </div>
+            <div class="section__content">
+                <div class="container">
+                    <div class="frame4__inner">
+                        <div class="footer-logo"></div>
+                        {% include "./component/footer.html.twig" %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+    {# Floating Components #} 
+
+    {# {% include "./component/navigation.html.twig" %} #}
+    {# {% include "./component/aside-left.html.twig" %} #}
+    {# {% include "./component/aside-right.html.twig" %} #}
+    {% include "./component/topnav.html.twig" %} 
+
+    {# Lightbox Components #}
+
+    {% include "./component/module.html.twig" %}
+    {# {% include "./component/popup.html.twig" %} #}
+
+    {# Add - on scripts #}
+
+    {% include "./component/livereload.html.twig" %} 
+
+    <script>
+        // Init Promotion 
+        let domainKM = ''; 
+        let urlPromotion = domainKM; 
+    </script>
+
+</body>
+</html>
+
