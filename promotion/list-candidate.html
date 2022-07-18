@@ -11,8 +11,6 @@
 
 <body>
 
-
-
     <div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
         <section id="frame1" class="section section--frame1 frame1 scrollFrame">
             <div class="section__background">
@@ -60,7 +58,7 @@
                                     <div class="candidates__filter">
                                         <ul class="filter">
                                             <li>
-                                                <div class="list-gender">
+                                                <!-- <div class="list-gender">
                                                     <input type="radio" name="data[sort]" id="top"
                                                         class="input-hidden" />
                                                     <label class="icon-top" for="top">
@@ -71,29 +69,62 @@
                                                     <label class="icon-random" for="random">
                                                         Ngẫu nhiên
                                                     </label>
-                                                </div>
+                                                </div> -->
+                                                <div class="dropdown_select" id="top">
+                                                    <div class="caption">Sắp xếp</div>
+                                                    <div class="list">
+                                                      <div class="item">
+                                                        <a href="#">Ngẫu nhiên</a>
+                                                      </div>
+                                                      <div class="item">
+                                                        <a href="#">Theo hạng</a>
+                                                      </div>                                                                                                        
+                                                    </div>
+                                                  </div>
                                             </li>
                                             <li>
-                                                <select name="data[gender]" id="gender">
-                                                    <option value="">Nam &amp; Nữ</option>
-                                                    <option value="">Nam </option>
-                                                    <option value="">Nữ </option>
-                                                </select>
+                                                <div class="dropdown_select" id="gender">
+                                                    <div class="caption">Chọn giới tính</div>
+                                                    <div class="list">
+                                                      <div class="item">Nam</div>
+                                                      <div class="item">Nữ</div>                                                                                                        
+                                                    </div>
+                                                  </div>
+                                               
                                             </li>
                                             <li>
-                                                <select name="data[game]" id="game">
-                                                    <option value="">Võ lâm truyền kỳ 1 Mobile</option>
-                                                </select>
+                                                <div class="dropdown_select" id="game">
+                                                    <div class="caption">Chọn game</div>
+                                                    <div class="list">
+                                                      <div class="item">
+                                                        <a href="#">Võ lâm truyền kỳ 1 Mobile</a>
+                                                      </div>
+                                                                                                                                                            
+                                                    </div>
+                                                  </div>
+                                               
                                             </li>
                                             <li>
-                                                <select name="data[server]" id="server">
-                                                    <option value="">S106 - Diệu Phụng</option>
-                                                </select>
+                                                <div class="dropdown_select" id="server">
+                                                    <div class="caption">Chọn máy chủ</div>
+                                                    <div class="list">
+                                                      <div class="item">S106 - Diệu Phụng</div>
+                                                      <div class="item">S107 - Alex</div>                                                                                                        
+                                                    </div>
+                                                  </div>
+                                                
                                             </li>
                                             <li>
-                                                <select name="data[area]" id="area">
-                                                    <option value="">Miền Nam</option>
-                                                </select>
+                                                <div class="dropdown_select" id="area">
+                                                    <div class="caption">Chọn Khu vực</div>
+                                                    <div class="list">
+                                                      <div class="item">
+                                                    <a href="#">Miền Nam</a>
+                                                      </div>
+                                                                                                                                                      
+                                                    </div>
+                                                  </div>
+                                               
                                             </li>
                                         </ul>
                                     </div>
@@ -107,10 +138,12 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
+                                                           <div class="vote_outsite">
                                                             <div class="candidate__vote">
                                                                 <span class="vote">18999</span>
                                                             </div>
-                                                           <div class="outsite">
+                                                           </div>
+                                                           <div class="rank_outsite">
                                                             <div class="candidate__rank">
                                                                 <span class="rank">18999</span>
                                                             </div>
@@ -138,12 +171,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
+                                                           <div class="vote_outsite">
                                                             <div class="candidate__vote">
                                                                 <span class="vote">18999</span>
                                                             </div>
+                                                           </div>
+                                                           <div class="rank_outsite">
                                                             <div class="candidate__rank">
                                                                 <span class="rank">18999</span>
                                                             </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -167,16 +204,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                            <div class="bg-vote">
-                                                                <div class="candidate__rank">
-                                                                    <span class="icon-rank"></span>
-                                                                    <span class="rank">18999</span>
-                                                                </div>
-                                                                <div class="candidate__vote">
-                                                                    <div class="vote">18999</div>
-                                                                </div>
+                                                           <div class="vote_outsite">
+                                                            <div class="candidate__vote">
+                                                                <span class="vote">18999</span>
                                                             </div>
-
+                                                           </div>
+                                                           <div class="rank_outsite">
+                                                            <div class="candidate__rank">
+                                                                <span class="rank">18999</span>
+                                                            </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -200,12 +237,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
+                                                           <div class="vote_outsite">
                                                             <div class="candidate__vote">
                                                                 <span class="vote">18999</span>
                                                             </div>
+                                                           </div>
+                                                           <div class="rank_outsite">
                                                             <div class="candidate__rank">
                                                                 <span class="rank">18999</span>
                                                             </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -229,12 +270,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
+                                                           <div class="vote_outsite">
                                                             <div class="candidate__vote">
                                                                 <span class="vote">18999</span>
                                                             </div>
+                                                           </div>
+                                                           <div class="rank_outsite">
                                                             <div class="candidate__rank">
                                                                 <span class="rank">18999</span>
                                                             </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -258,70 +303,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
+                                                           <div class="vote_outsite">
                                                             <div class="candidate__vote">
                                                                 <span class="vote">18999</span>
                                                             </div>
+                                                           </div>
+                                                           <div class="rank_outsite">
                                                             <div class="candidate__rank">
                                                                 <span class="rank">18999</span>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="candidate__info">
-                                                        <div class="candidate__insite">
-                                                            <div class="candidate__character">
-                                                                <span class="candidate__username">Tên thí sinh</span>
-                                                            </div>
-
-                                                            <div class="candidate__description">
-                                                                <span class="candidate__game">SBD 999 - Võ Lâm Truyền Kỳ
-                                                                    1 Mobile -S90</span> |
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="candidate__item">
-                                                <a href="#">
-                                                    <div class="candidate__thumbnail">
-                                                        <img src="assets/images/data/profile-1.png"
-                                                            alt="Nguyễn Trần Mạnh Hoàng ">
-
-                                                        <div class="candidate__score">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
-                                                            </div>
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="candidate__info">
-                                                        <div class="candidate__insite">
-                                                            <div class="candidate__character">
-                                                                <span class="candidate__username">Tên thí sinh</span>
-                                                            </div>
-
-                                                            <div class="candidate__description">
-                                                                <span class="candidate__game">SBD 999 - Võ Lâm Truyền Kỳ
-                                                                    1 Mobile -S90</span> |
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li class="candidate__item">
-                                                <a href="#">
-                                                    <div class="candidate__thumbnail">
-                                                        <img src="assets/images/data/profile-1.png"
-                                                            alt="Nguyễn Trần Mạnh Hoàng ">
-
-                                                        <div class="candidate__score">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
-                                                            </div>
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
-                                                            </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -408,6 +399,7 @@
 
     <script type="text/javascript" src="1.promotion.bundle.js"></script>
     <script type="text/javascript" src="promotion.bundle.js"></script>
+    <script src="./slider-funtion.js"></script>
 </body>
 
 </html>
