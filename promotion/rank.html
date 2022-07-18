@@ -1,418 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotion - Web Platform 3.0</title>
-<link href="1.promotion.css" rel="stylesheet"><link href="promotion.css" rel="stylesheet"></head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Promotion - Web Platform 3.0</title>
+	<link href="1.promotion.css" rel="stylesheet">
+	<link href="promotion.css" rel="stylesheet">
+</head>
+
 <body>
+	<div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
+		<section id="frame1" class="section section--frame1 frame1 scrollFrame">
+			<div class="section__background">
+				<img data-src="assets/images/bg/bg-horizontal.png" class="desktop lazyload" alt="">
+				<img data-src="assets/images/bg/bg-vertical.png" class="mobile lazyload" alt="">
+			</div>
+			<div class="section__content">
+				<div class="container">
+					<div class="frame1__inner">
+						<div id="topfloat" class="topfloat ">
 
-    
-    
-    <div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
-        <section id="frame1" class="section section--frame1 frame1 scrollFrame">
-            <div class="section__background">
-                <img data-src="assets/images/bg/bg-horizonal.jpg" class="desktop lazyload" alt="">
-                <img data-src="assets/images/bg/bg-vertical.jpg" class="mobile lazyload" alt="">
-            </div>
-            <div class="section__content">
-                <div class="container">
-                    <div class="frame1__inner">
-                        
+							<div id="topnav" class="topnav ">
+								<ul>
+									<li>
+										<a href="#" class="topnav__item">
+											DANH SÁCH
+										</a>
+									</li>
+									<li>
+										<a href="#" class="topnav__item active">
+											ĐĂNG KÝ
+										</a>
+									</li>
+									<li>
+										<a href="#" class="topnav__item">
+											XẾP HẠNG
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="main">
+							<div class="main__header">
+								<h1 class="title title--rank">ĐĂNG KÝ DỰ THI</h1>
+								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
+									LỆ</a>
+							</div>
+							<div class="main__content">
 
-<div id="topfloat" class="topfloat ">
+								<div class="rank">	
 
-    <div id="topnav" class="topnav ">
-        <ul>
-            <li>
-                <a href="#" class="topnav__item">
-                    DANH SÁCH
-                </a>
-            </li>
-            <li>
-                <a href="#" class="topnav__item active">
-                    ĐĂNG KÝ
-                </a>
-            </li>
-            <li>
-                <a href="#" class="topnav__item">
-                    XẾP HẠNG
-                </a>
-            </li> 
-        </ul>
-    </div>
-</div> 
-                        <div class="main">
-                            <div class="main__header">								
-                                <h1 class="title title--rank">XẾP HẠNG KHÁNG GIẢ</h1>
-                                <a href="#popup_rules" data-lightbox class="btni btni--rules">THỂ LỆ</a>
-                            </div>
-                            <div class="main__content">
-                                
-			<div class="rank">
-				
-				<div class="rank__filter">
-					<ul class="filter">
-						<li>
-							<select name="data[game]" id="game">
-								<option value="">Võ lâm truyền kỳ 1 Mobile</option>
-							</select>						
-						</li>
-					</ul>
+									<div class="rank__filter">
+										<select id="normal-select-1" placeholder-text="Item 1">
+											<option value="1" class="select-dropdown__list-item">Item 1</option>
+											<option value="2" class="select-dropdown__list-item">Item 2</option>
+											<option value="3" class="select-dropdown__list-item">Item 3</option>
+											<option value="4" class="select-dropdown__list-item">Item 4</option>
+											<option value="5" class="select-dropdown__list-item">Item 5</option>
+											<option value="6" class="select-dropdown__list-item">Item 6</option>
+										</select>
+										<select id="normal-select-2" placeholder-text="Item 1">
+											<option value="1" class="select-dropdown__list-item">Item 1</option>
+											<option value="2" class="select-dropdown__list-item">Item 2</option>
+											<option value="3" class="select-dropdown__list-item">Item 3</option>
+											<option value="4" class="select-dropdown__list-item">Item 4</option>
+											<option value="5" class="select-dropdown__list-item">Item 5</option>
+											<option value="6" class="select-dropdown__list-item">Item 6</option>
+										</select>
+										<!-- <ul class="filter">
+											<li>
+												<select name="data[game]" id="game">
+													<option value="">Chọn game</option>
+													<option value="">Võ lâm truyền kỳ 1 Mobile</option>
+												</select>
+											</li>
+										</ul> -->
+									</div>
+									<div class="rank__detail">
+										<table width="100%" class="rank__table">
+											<thead>
+												<tr>
+													<th class="stt">TOP</th>
+													<th class="nhanvat">Nhân vật</th>
+													<th class="group desktop">Bang Hội</th>
+													<th class="server desktop">Máy chủ</th>
+													<th class="flower">Hoa hồng đã tặng</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr class="rank-1">
+													<td>
+														<img src="./assets/images/icon/top1.png" alt="top 1">
+													</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr class="rank-2">
+													<td>
+														<img src="./assets/images/icon/top2.png" alt="top 2">
+													</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr class="rank-3">
+													<td>
+														<img src="./assets/images/icon/top3.png" alt="top 3">
+													</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>10</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+											</tbody>
+										</table>
+										<nav>
+											<ul class="pagination">
+												<li class="page-item btn-first">
+													<a class="page-link" href="">
+														Đầu
+													</a>
+												</li>
+												<li class="page-item btn-prev">
+													<a class="page-link" href="" aria-label="Previous">
+														<span aria-hidden="true">Trang trước</span>
+													</a>
+												</li>
+												<li class="page-item btn-number">
+													<a class="page-link" href="">1</a>
+												</li>
+												<li class="page-item btn-number active">
+													<a class="page-link" href="">2</a>
+												</li>
+												<li class="page-item btn-number">
+													<a class="page-link" href="">3</a>
+												</li>
+												<li class="page-item btn-number">
+													<a class="page-link" href="">4</a>
+												</li>
+												<li class="page-item btn-next">
+													<a class="page-link" href="" aria-label="Next">
+														<span aria-hidden="true">Trang Sau</span>
+
+													</a>
+												</li>
+												<li class="page-item btn-last">
+													<a class="page-link" href="">
+														Cuối
+													</a>
+												</li>
+											</ul>
+										</nav>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="rank__detail">
-					<table width="100%" class="rank__table">
-							<thead>
-								<tr>
-									<th class="stt">TOP</th>
-									<th class="nhanvat">NHÂN VẬT</th>
-									<th class="server">MÁY CHỦ</th>
-									<th class="flower">TIM ĐÃ TẶNG</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="rank-1">
-									<td><span>1</span></td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr class="rank-2">
-									<td><span>2</span></td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr class="rank-3">
-									<td><span>3</span></td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>4</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>5</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>6</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>7</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>8</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>9</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-								<tr >
-									<td>10</td>
-									<td>Nguyễn Trần Mạnh Hoàng </td>
-									<td>S22</td>
-									<td>32000</td>
-								</tr>
-							</tbody>
-					</table>
-					<nav>
-						<ul class="pagination">
-							<li class="page-item">
-								<a class="page-link" href="" aria-label="Previous">
-									<span aria-hidden="true">«</span>
-									
-								</a>
-							</li>
-							<li class="page-item ">
-								<a class="page-link" href="">1</a>
-							</li>
-							<li class="page-item active">
-								<a class="page-link" href="">2</a>
-							</li>
-							<li class="page-item ">
-								<a class="page-link" href="">3</a>
-							</li>
-							<li class="page-item ">
-								<a class="page-link" href="">4</a>
-							</li>
-							<li class="page-item">
-								<a class="page-link" href="" aria-label="Next">
-									<span aria-hidden="true">»</span>
-									
-								</a>
-							</li>
-						</ul>
-					</nav>
+			</div>
+		</section>
+		<div id="popup_rules" class="popup popup--default ">
+			<div class="popup__background"></div>
+			<div class="popup__content">
+				<div class="popup__wrapper">
+					<h2 class="title title--auth">
+						Thể Lệ cuộc thi
+					</h2>
+					<div class="popup__iframe">
+						<iframe src="../article/article.html" frameborder="0"></iframe>	
+					</div>
 				</div>
-			</div>                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-     
-
-    
-    
-    
-
-    
-
-    
-    <div id="popup_rules" class="popup popup--default ">
-	<div class="popup__background"></div>
-	<div class="popup__content  ">	
-		<div class="popup__wrapper">
-			<h2 class="title title--auth">
-				Thể Lệ cuộc thi
-			</h2>
-			<div class="popup__iframe">
-				<iframe src="../article/article.html" frameborder="0"></iframe>
-
-				
+				<span class="popup__close close">X</span>
 			</div>
 		</div>
-		<span class="popup__close close">X</span>
 	</div>
-</div>
+	
+	<script type="text/javascript" src="1.promotion.bundle.js"></script>
+	<script type="text/javascript" src="promotion.bundle.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js'></script>
+	<script type="text/javascript" src="slider-funtion.js"></script>
+</body>
 
-<div id="popup_receive" class="popup popup--default pm__module pm__condition-module active">
-	<div class="popup__background"></div>
-	<div class="popup__content">
-		<div class="popup__wrapper">
-            <h2 class="title title--info">
-                NHẬN THƯỞNG KHÁN GIẢ
-            </h2>
-			<div class="tabcontent">
-			
-				<ul class="tabcontent__tab">
-					<li>
-						<input type="radio" name="content_tab" id="tabcontent_tab__thuong_moc_ca_nhan" data-content="#tabcontent_content__thuong_moc_ca_nhan" checked>
-						<label for="tabcontent_tab__thuong_moc_ca_nhan">
-							THƯỞNG MỐC CÁ NHÂN
-						</label>
-					</li>
-					<li>
-						<input type="radio" name="content_tab" id="tabcontent_tab__thuong_moc_may_chu" data-content="#tabcontent_content__thuong_moc_may_chu">
-						<label for="tabcontent_tab__thuong_moc_may_chu">
-							THƯỞNG MỐC MÁY CHỦ
-						</label>
-					</li>
-				</ul>
-
-				<ul class="tabcontent__content">
-					<li id="tabcontent_content__thuong_moc_ca_nhan" class="active">
-						<div class="tabcontent__content">
-							<article class="article">
-								<div class="article__content">
-									<p>
-										Số Tim cá nhân đã tặng: <strong>123456</strong> <br />
-										Tặng Tim càng nhiều, phần thưởng mốc càng phong phú:
-									</p>							
-									<div class="table">
-									<table>
-											<thead>
-												<tr>
-													<th>MỐC</th>
-													<th>HÌNH ẢNH</th>
-													<th>TÊN PHẦN THƯỞNG</th>
-													<th>TRẠNG THÁI</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>10</td>
-													<td>
-														<img src="assets/images/gifts/ruong_chau_bau.png" alt="">
-													</td>
-													<td>10 Rương Châu Báu Thủy Tặc Lv6</td>
-													<td>
-														<a class="btni btni--popup-receive received">Nhận</a>
-														10:30 | 22.07.2021
-													</td>
-												</tr>
-												<tr>
-													<td>30</td>
-													<td>
-														<img src="assets/images/gifts/lenh_bai.png" alt="">
-													</td>
-													<td>Lệnh Bài Chuyển Đổi Môn Phái</td>
-													<td>
-														<a class="btni btni--popup-receive off">Nhận</a>
-														10:30 | 22.07.2021
-													</td>
-												</tr>
-											</tbody>
-										</table> 
-									</div>
-								
-								</div>
-							
-							</article>
-						</div>
-					</li>
-					<li id="tabcontent_content__thuong_moc_may_chu">
-						<div class="tabcontent__content">
-							<article class="article">
-								<div class="article__content">
-									<p>
-										Số Tim cá nhân đã tặng: <strong>654321</strong> <br />
-										Tặng Tim càng nhiều, phần thưởng mốc càng phong phú:
-									</p>							
-									<div class="table">
-									<table>
-											<thead>
-												<tr>
-													<th>MỐC</th>
-													<th>HÌNH ẢNH</th>
-													<th>TÊN PHẦN THƯỞNG</th>
-													<th>TRẠNG THÁI</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>10</td>
-													<td>
-														<img src="assets/images/gifts/ruong_chau_bau.png" alt="">
-													</td>
-													<td>10 Rương Châu Báu Thủy Tặc Lv6</td>
-													<td>
-														<a class="btni btni--popup-receive received">Nhận</a>
-														10:30 | 22.07.2021
-													</td>
-												</tr>
-												<tr>
-													<td>30</td>
-													<td>
-														<img src="assets/images/gifts/lenh_bai.png" alt="">
-													</td>
-													<td>Lệnh Bài Chuyển Đổi Môn Phái</td>
-													<td>
-														<a class="btni btni--popup-receive off">Nhận</a>
-														10:30 | 22.07.2021
-													</td>
-												</tr>
-											</tbody>
-										</table> 
-									</div>
-								
-								</div>
-							
-							</article>
-						</div>
-					</li>
-				</ul>
-			
-			</div>
-
-			
-        </div>
-
-		<span class="popup__close close">X</span>
-	</div>
-</div>
-
-<div id="popup_receive_candidate" class="popup popup--default pm__module pm__condition-module active">
-	<div class="popup__background"></div>
-	<div class="popup__content">
-		<div class="popup__wrapper">
-            <h2 class="title title--info">
-                NHẬN THƯỞNG THÍ SINH
-            </h2>
-			<div class="tabcontent">
-
-				<ul class="tabcontent__content">
-					<li id="tabcontent_content__thuong_moc_ca_nhan" class="active">
-						<div class="tabcontent__content">
-							<article class="article">
-								<div class="article__content">
-									<p>
-										Chúc mừng bạn đã được nhận thưởng Vòng 1 <br />
-										Điểm số của bạn là: <strong>98989</strong> <br />
-										Phần thưởng được nhận gồm có:
-									</p>							
-									<div class="table">
-									<table>
-											<thead>
-												<tr>
-													<th>HÌNH ẢNH</th>
-													<th>TÊN PHẦN THƯỞNG</th>
-													<th>TRẠNG THÁI</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>
-														<img src="assets/images/gifts/ruong_chau_bau.png" alt="">
-													</td>
-													<td>10 Rương Châu Báu Thủy Tặc Lv6</td>
-													<td>
-														<a class="btni btni--popup-receive received">Nhận</a>
-														10:30 | 22.07.2021
-													</td>
-												</tr>
-												<tr>
-													<td>
-														<img src="assets/images/gifts/lenh_bai.png" alt="">
-													</td>
-													<td>Lệnh Bài Chuyển Đổi Môn Phái</td>
-													<td>
-														<a class="btni btni--popup-receive off">Nhận</a>
-														10:30 | 22.07.2021
-													</td>
-												</tr>
-											</tbody>
-										</table> 
-									</div>
-								
-								</div>
-							
-							</article>
-						</div>
-					</li>
-				</ul>
-			
-			</div>
-
-			
-        </div>
-
-		<span class="popup__close close">X</span>
-	</div>
-</div>
-    
-
-    <script>document.write('<script src="http://'
-    + (location.host || 'localhost').split(':')[0]
-    + ':35729/livereload.js"></'
-    + 'script>')</script>   
-
-    <script>
-        // Init Promotion 
-        let domainKM = ''; 
-        let urlPromotion = domainKM; 
-    </script>
-
-<script type="text/javascript" src="1.promotion.bundle.js"></script><script type="text/javascript" src="promotion.bundle.js"></script></body>
 </html>
-
