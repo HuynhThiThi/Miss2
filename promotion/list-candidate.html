@@ -48,79 +48,61 @@
                                     LỆ</a>
                             </div>
                             <div class="main__content">
-                                <div class="candidates">                                    
+                                <div class="candidates">
                                     <div class="candidates__filter">
                                         <ul class="filter">
-                                            <li>
-                                                <!-- <div class="list-gender">
-                                                    <input type="radio" name="data[sort]" id="top"
-                                                        class="input-hidden" />
-                                                    <label class="icon-top" for="top">
-                                                        Dẫn đầu
-                                                    </label>
-                                                    <input type="radio" name="data[sort]" id="random"
-                                                        class="input-hidden" />
-                                                    <label class="icon-random" for="random">
-                                                        Ngẫu nhiên
-                                                    </label>
-                                                </div> -->
-                                               <div class="outsite-select">
-                                                <select name="gender" id="gender" class="pm__sort">
+                                            <li class="filter_item">
+
+                                                <select class="cs-select cs-select-custom pm__sort">
                                                     <option value="" selected disabled>Sắp xếp</option>
-                                                    <option value="M">Ngẫu nhiên</option>
-                                                    <option value="F">Theo hạng</option>
+                                                    <option value="random">Ngẫu nhiên</option>
+                                                    <option value="top">Theo hạng</option>
                                                 </select>
-                                               </div>
+
                                             </li>
-                                            <li>
-                                                <div class="dropdown_select" id="gender">
-                                                    <div class="caption">Chọn giới tính</div>
-                                                    <div class="list">
-                                                      <div class="item">Nam</div>
-                                                      <div class="item">Nữ</div>                                                                                                        
-                                                    </div>
-                                                  </div>
-                                               
+                                            <li class="filter_item">
+                                                <select name="gender" id="gender"
+                                                    class="cs-select cs-select-custom pm__filter">
+                                                    <option value="" selected disabled>Chọn giới tính</option>
+                                                    <option value="M">Nam</option>
+                                                    <option value="F">Nữ</option>
+                                                </select>
+
                                             </li>
-                                            <li>
-                                                <div class="dropdown_select" id="game">
-                                                    <div class="caption">Chọn game</div>
-                                                    <div class="list">
-                                                      <div class="item">
-                                                        <a href="#">Võ lâm truyền kỳ 1 Mobile</a>
-                                                      </div>
-                                                                                                                                                            
-                                                    </div>
-                                                  </div>
-                                               
+
+                                            <li class="filter_item">
+                                                <select name="program" id="program"
+                                                    class="cs-select cs-select-custom pm__filter-program">
+                                                    <option value="" selected disabled>Chọn game</option>
+                                                    <option value="">Võ lâm truyền kỳ 1 Mobile</option>
+                                                    <option value="">Gunny</option>
+                                                </select>
                                             </li>
-                                            <li>
-                                                <div class="dropdown_select" id="server">
-                                                    <div class="caption">Chọn máy chủ</div>
-                                                    <div class="list">
-                                                      <div class="item">S106 - Diệu Phụng</div>
-                                                      <div class="item">S107 - Alex</div>                                                                                                        
-                                                    </div>
-                                                  </div>
-                                                
+                                            <li class="filter_item">
+                                                <select name="server" id="server"
+                                                    class="cs-select cs-select-custom pm__filter-server">
+                                                    <option value=""selected disabled >Chọn máy chủ</option>
+                                                    <option value="B">S106 - Diệu Phụng</option>
+                                                    <option value="T">S105 </option>
+
+                                                </select>
                                             </li>
-                                            <li>
-                                                <div class="dropdown_select" id="area">
-                                                    <div class="caption">Chọn Khu vực</div>
-                                                    <div class="list">
-                                                      <div class="item">
-                                                    <a href="#">Miền Nam</a>
-                                                      </div>
-                                                                                                                                                      
-                                                    </div>
-                                                  </div>                                               
+                                            <li class="filter_item">
+                                                <select name="area" id="area"
+                                                    class="cs-select cs-select-custom pm__filter-area">
+                                                    <option value="" selected disabled>Khu vực</option>
+                                                    <option value="B">Miền Bắc</option>
+                                                    <option value="T">Miền Trung</option>
+                                                    <option value="N">Miền Nam</option>
+                                                </select>
                                             </li>
-                                            <li>
+                                            
+                                            <li class="filter_item">
                                                 <div class="candidates__search">
 
                                                     <input type="text" placeholder="Tìm thí sinh theo số báo danh">
                                                     <button class="btni btni--magnify">Tìm</button>
-            
+
                                                 </div>
                                             </li>
                                         </ul>
@@ -135,16 +117,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                           <div class="vote_outsite">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
+                                                            <div class="vote_outsite">
+                                                                <div class="candidate__vote">
+                                                                    <span class="vote">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
-                                                           <div class="rank_outsite">
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
+                                                            <div class="rank_outsite">
+                                                                <div class="candidate__rank">
+                                                                    <span class="rank">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -168,16 +150,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                           <div class="vote_outsite">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
+                                                            <div class="vote_outsite">
+                                                                <div class="candidate__vote">
+                                                                    <span class="vote">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
-                                                           <div class="rank_outsite">
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
+                                                            <div class="rank_outsite">
+                                                                <div class="candidate__rank">
+                                                                    <span class="rank">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -201,16 +183,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                           <div class="vote_outsite">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
+                                                            <div class="vote_outsite">
+                                                                <div class="candidate__vote">
+                                                                    <span class="vote">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
-                                                           <div class="rank_outsite">
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
+                                                            <div class="rank_outsite">
+                                                                <div class="candidate__rank">
+                                                                    <span class="rank">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -234,16 +216,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                           <div class="vote_outsite">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
+                                                            <div class="vote_outsite">
+                                                                <div class="candidate__vote">
+                                                                    <span class="vote">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
-                                                           <div class="rank_outsite">
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
+                                                            <div class="rank_outsite">
+                                                                <div class="candidate__rank">
+                                                                    <span class="rank">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -267,16 +249,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                           <div class="vote_outsite">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
+                                                            <div class="vote_outsite">
+                                                                <div class="candidate__vote">
+                                                                    <span class="vote">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
-                                                           <div class="rank_outsite">
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
+                                                            <div class="rank_outsite">
+                                                                <div class="candidate__rank">
+                                                                    <span class="rank">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -300,16 +282,16 @@
                                                             alt="Nguyễn Trần Mạnh Hoàng ">
 
                                                         <div class="candidate__score">
-                                                           <div class="vote_outsite">
-                                                            <div class="candidate__vote">
-                                                                <span class="vote">18999</span>
+                                                            <div class="vote_outsite">
+                                                                <div class="candidate__vote">
+                                                                    <span class="vote">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
-                                                           <div class="rank_outsite">
-                                                            <div class="candidate__rank">
-                                                                <span class="rank">18999</span>
+                                                            <div class="rank_outsite">
+                                                                <div class="candidate__rank">
+                                                                    <span class="rank">18999</span>
+                                                                </div>
                                                             </div>
-                                                           </div>
                                                         </div>
                                                     </div>
                                                     <div class="candidate__info">
@@ -397,6 +379,7 @@
     <script type="text/javascript" src="1.promotion.bundle.js"></script>
     <script type="text/javascript" src="promotion.bundle.js"></script>
     <script src="./slider-funtion.js"></script>
+    <script src="select.js"></script>
 </body>
 
 </html>

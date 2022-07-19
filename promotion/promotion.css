@@ -3077,7 +3077,13 @@ hr.split--giant {
     
 }
 }
-
+li.lslide.active::after {
+  content: "";
+  background: url(./assets/images/sprites/_sprites_shape.png);
+  background-position: -360px -2px; 
+  width: 87px;
+  height: 83px;
+}
 .lSSlideWrapper.usingCss {
   position: relative;
   margin: 0 0 32px;
@@ -3958,7 +3964,8 @@ body.body-article {
   margin: 0;
   /* background: #191919; */
   position: absolute;
-  width: 100%;
+  width: 100% !important;
+  height: 100% !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) !important;
@@ -4235,37 +4242,45 @@ body.body-article {
 }
 
 .filter {
-  display: grid;  
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-column-gap: 15px;
-    grid-row-gap: 25px;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.filter li {
+.filter li.filter_item {
   color: #FFF;
   font-size: 26px;  
+  margin: 0 0 20px 0;
+ 
 }
 
 @media (orientation: portrait) {
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
   .filter li:nth-child(1) {
     order: 2;
-    width: 50%
+    width: 50%;
+   
+  }
+  .filter li.filter_item:nth-child(2) {
+    order: 3;
+    width: 50%;
+    padding: 0px 0px 0px 20px;
   }
 
   .filter li:nth-child(3) {
-    order: 3;
-    width: 50%
-  }
-
-  .filter li:nth-child(2) {
     order: 4;
     width: 50%;
+    
   }
-
-  .filter li:nth-child(4) {
+  .filter li.filter_item:nth-child(4) {
     order: 5;
-    width: 50%
+    width: 50%;
+    padding: 0px 0px 0px 20px;
   }
 
   .filter li:nth-child(5) {
@@ -4285,14 +4300,31 @@ body.body-article {
   height: 100%
 }
 .filter li select {
-  clip-path: polygon(20% 0%, 100% 0, 100% 12%, 100% 84%, 85% 100%, 0 100%, 0% 80%, 0 13%);
-  background: red;
+  font-family: 'Kanit';
+  clip-path: polygon(6% 0, 100% 0, 100% -21%, 100% 93%, 94% 100%, 0 99%, 0% 80%, 0 13%); 
+  /* background: #3170ff; */
+  background: url(./assets/images/icon/arrow.png) no-repeat right #3170ff;
+  height: 65px;
+    width: 260px;
+    padding: 10px;
+    color: #fff;
+    background-position-x: calc(100% - 10px);
+    background-position-y: calc(50% + 0px);
 } 
 .outsite-select {
   display: inline-flex;
-  clip-path: polygon(20% 0%, 100% 0, 100% 12%, 100% 84%, 85% 100%, 0 100%, 0% 80%, 0 13%);
-  background: #0000FF;
+  clip-path: polygon(6% 0, 100% 0, 100% -21%, 100% 93%, 94% 100%, 0 99%, 0% 80%, 0 13%); 
+  background: #a7e4fd;
+  padding: 3px;
 } 
+option:hover
+{
+  background: orange !important;
+  color: #fff;
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
 
 .filter li .list-gender {
   display: flex
@@ -6368,7 +6400,7 @@ p.note-cnnd {
 /* div.dropdown {
   position: relative;
 } */
-div.dropdown_select {
+/* div.dropdown_select {
   position: relative;
   background: url(./assets/images/sprites/_sprites_pagination.png);
   background: url(./assets/images/sprites/_sprites_pagination.png);
@@ -6444,4 +6476,306 @@ div.dropdown_select.open>div.caption {
 
 div.dropdown_select.open div.list {
   display: block;
+} */
+.text__center{
+  text-align: center;
+}
+div.cs-select {
+  position: relative;
+  z-index: 100;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: left;
+  vertical-align: middle;
+  background: #fff;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+}
+
+div.cs-select:focus {
+  outline: none;
+  /* For better accessibility add a style for this in your skin */
+}
+
+.cs-select select {
+  display: none;
+}
+
+.cs-select span {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 1em;
+  cursor: pointer;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* Placeholder and selected option */
+
+.cs-select > span {
+  padding-right: 3em;
+}
+
+.cs-select > span:after,
+.cs-select .cs-selected span:after {
+  position: absolute;
+    top: 40%;
+    background: url(./assets/images/icon/arrow.png) no-repeat right #3170ff00;
+    width: 30px;
+    padding: 10px;
+    color: #fff;
+    background-position-x: calc(100% - 0px);
+}
+
+.cs-select > span::after {
+  right: 1em;
+  content: '';
+}
+
+.cs-select .cs-selected span::after {
+  margin-left: 1em;
+  content: '\2713';
+}
+
+.cs-select.cs-active > span::after {
+  -webkit-transform: translateY(-15%) rotate(180deg);
+  transform: translateY(-15%) rotate(180deg);
+}
+
+div.cs-active {
+  z-index: 200;
+}
+/* Options */
+
+.cs-select .cs-options {
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  width: 100%;
+  background: #fff;
+}
+
+.cs-select.cs-active .cs-options {
+  visibility: visible;
+}
+
+.cs-select ul {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-select ul span {
+  padding: 15px;
+    height: 60px;
+}
+
+.cs-select ul li.cs-focus span {
+  background-color: #ddd;
+}
+/* Optgroup and optgroup label */
+
+.cs-select li.cs-optgroup ul {
+  padding-left: 1em;
+}
+
+.cs-select li.cs-optgroup > span {
+  cursor: default;
+}
+
+div.cs-select-custom {
+  font-family: "Kanit";
+  font-size: 26px;
+  color: #fff;
+  background: transparent;
+}
+
+@media screen and (max-width: 30em) {
+  div.cs-select-custom {
+    font-size: 1em;
+  }
+}
+
+.cs-select-custom > span {
+  min-width: 260px;
+    z-index: 100;
+    background-color: #a7e4fd;
+    clip-path: polygon(6% 0, 100% 0, 100% -21%, 100% 93%, 94% 100%, 0 99%, 0% 80%, 0 13%);
+    height: 70px;
+    padding: 22px;
+}
+.cs-select-custom > span::before {
+  content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: -1;
+    height: 92%;
+    width: 98%;
+    background-color: #3170ff;
+    clip-path: inherit;
+}
+
+.cs-select-custom .cs-options {
+  visibility: visible;
+  overflow: visible;
+  padding-bottom: 1.25em;
+  pointer-events: none;
+  opacity: 1;
+  background: transparent;
+}
+
+.cs-select-custom.cs-active .cs-options ul {
+  pointer-events: auto;
+  border: 4px solid #0564f3;
+}
+
+/* .cs-select-custom .cs-options > ul::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  -webkit-transform: scale3d(1, 0, 1);
+  transform: scale3d(1, 0, 1);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  background: #fff;
+} */
+
+
+.cs-select-custom .cs-options ul li {
+  width: 100%;
+  background: #1e49ac;
+  -webkit-transition: opacity .15s, -webkit-transform .15s;
+  transition: opacity .15s, transform .15s;
+  -webkit-transform: translate3d(0, -25px, 0);
+  transform: translate3d(0, -25px, 0);
+  opacity: 0;
+}
+
+.cs-select-custom.cs-active .cs-options ul li {
+  
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-animation: none .6s ease-out;
+  animation: none .6s ease-out;
+  opacity: 1;
+}
+
+.cs-select-custom .cs-options span {
+  background-repeat: no-repeat;
+  background-position: 1.5em 50%;
+  background-size: 2em auto;
+}
+
+.cs-select-custom .cs-options span:hover,
+.cs-select-custom .cs-options li.cs-focus span,
+.cs-select-custom .cs-options .cs-selected span {
+  color: #fff;
+  background: #1b3d88;
+
+}
+
+.cs-select-custom .cs-options .cs-selected span::after {
+  content: '';
+  display: none;
+}
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1, .85, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes expand {
+  0% {
+    -webkit-transform: scale3d(1, 0, 1);
+    transform: scale3d(1, 0, 1);
+  }
+  25% {
+    -webkit-transform: scale3d(1, 1.2, 1);
+    transform: scale3d(1, 1.2, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1, .85, 1);
+    transform: scale3d(1, .85, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1, 1.05, 1);
+    transform: scale3d(1, 1.05, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translate3d(0, -25px, 0);
+    transform: translate3d(0, -25px, 0);
+    opacity: 0;
+  }
+  25% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -6px, 0);
+    transform: translate3d(0, -6px, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, 2px, 0);
+    transform: translate3d(0, 2px, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
