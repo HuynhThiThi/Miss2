@@ -48,13 +48,7 @@
                                     LỆ</a>
                             </div>
                             <div class="main__content">
-                                <div class="candidates">
-                                    <div class="candidates__search">
-
-                                        <input type="text" placeholder="Tìm thí sinh theo số báo danh">
-                                        <button class="btni btni--magnify">Tìm</button>
-
-                                    </div>
+                                <div class="candidates">                                    
                                     <div class="candidates__filter">
                                         <ul class="filter">
                                             <li>
@@ -70,17 +64,13 @@
                                                         Ngẫu nhiên
                                                     </label>
                                                 </div> -->
-                                                <div class="dropdown_select" id="top">
-                                                    <div class="caption">Sắp xếp</div>
-                                                    <div class="list">
-                                                      <div class="item">
-                                                        <a href="#">Ngẫu nhiên</a>
-                                                      </div>
-                                                      <div class="item">
-                                                        <a href="#">Theo hạng</a>
-                                                      </div>                                                                                                        
-                                                    </div>
-                                                  </div>
+                                               <div class="outsite-select">
+                                                <select name="gender" id="gender" class="pm__sort">
+                                                    <option value="" selected disabled>Sắp xếp</option>
+                                                    <option value="M">Ngẫu nhiên</option>
+                                                    <option value="F">Theo hạng</option>
+                                                </select>
+                                               </div>
                                             </li>
                                             <li>
                                                 <div class="dropdown_select" id="gender">
@@ -123,8 +113,15 @@
                                                       </div>
                                                                                                                                                       
                                                     </div>
-                                                  </div>
-                                               
+                                                  </div>                                               
+                                            </li>
+                                            <li>
+                                                <div class="candidates__search">
+
+                                                    <input type="text" placeholder="Tìm thí sinh theo số báo danh">
+                                                    <button class="btni btni--magnify">Tìm</button>
+            
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>

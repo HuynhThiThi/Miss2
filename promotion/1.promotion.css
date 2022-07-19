@@ -4088,18 +4088,37 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-container {
-    -webkit-backface-visibility: hidden;
-    height: 100%;
-    left: 0;
+  top: 0;
+  right: 0;
+  left: auto;
+  width: calc(100% - 150px);
+  height: 100%;
+  outline: none;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+  position: fixed;
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  z-index: 99992;
+}
+@media (orientation: portrait) {
+  .fancybox-container {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 100% !important;
+    height: calc(100% - 175px) !important;
     outline: none;
     position: fixed;
     -webkit-tap-highlight-color: transparent;
-    top: 0;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
     transform: translateZ(0);
-    width: 100%;
     z-index: 99992;
+}
 }
 
 .fancybox-container * {
