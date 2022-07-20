@@ -44,7 +44,8 @@
 						<div class="main">
 							<div class="main__header">
 								<h1 class="title title--register">ĐĂNG KÝ DỰ THI</h1>
-								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ LỆ</a>
+								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
+									LỆ</a>
 							</div>
 							<div class="main__content">
 								<div class="register">
@@ -92,7 +93,7 @@
 											<!--end cot hinh anh-->
 											<!--cot thong tin-->
 											<div class="block-info">
-											<ul class="list-info">
+												<ul class="list-info">
 													<li>
 														<div class="d-flex">
 															<div class="title-info">Nhân Vật</div>
@@ -139,9 +140,12 @@
 													<li>
 														<input type="text" name="data[phone]"
 															placeholder="Số Điện Thoại">
-														<select name="" id="">
-															<option value="a">Chọn khu vực</option>
-															<option value="a">Chọn khu vực</option>
+														<select name="" id=""
+															class="cs-select cs-select-custom select-area">
+															<option value="" selected disabled>Chọn khu vực</option>
+															<option value="B">Miền Bắc</option>
+															<option value="T">Miền Trung</option>
+															<option value="N">Miền Nam</option>
 														</select>
 													</li>
 													<li>
@@ -182,7 +186,7 @@
 														name="btnSubmit">
 													<a href="#popup_agree" data-lightbox="">
 														<input type="submit" class="btni btni--submit show-thongbao-ok"
-														name="btnSubmit" >
+															name="btnSubmit">
 													</a>
 												</div>
 											</div>
@@ -197,7 +201,7 @@
 		</section>
 
 		<!-- POPUP THỂ LỆ -->
-		<div id="popup_rules" class="popup popup--default ">
+		<div id="popup_rules" class="popup popup--default">
 			<div class="popup__background"></div>
 			<div class="popup__content  ">
 				<div class="popup__wrapper">
@@ -206,15 +210,15 @@
 					</h2>
 					<div class="popup__iframe">
 						<iframe src="../article/article.html" frameborder="0"></iframe>
-	
-	
+
+
 					</div>
 				</div>
 				<span class="popup__close close">X</span>
 			</div>
 		</div>
 		<!-- POPUP thông báo -->
-		<div id="popup_agree" class="popup popup--default pm__module pm__condition-module active">
+		<div id="popup_agree" class="popup popup--default pm__module pm__condition-module">
 			<div class="popup__background"></div>
 			<div class="popup__content">
 				<div class="popup__wrapper">
@@ -225,11 +229,11 @@
 						<p>Bài thi đang được xét duyệt</p>
 					</div>
 					<div class="tab-submit">
-						<div  class="btni btn-ok">Ok</div>
+						<div class="btni btn-ok">Ok</div>
 					</div>
-	
+
 				</div>
-	
+
 			</div>
 			<span class="popup__close close">X</span>
 		</div>
@@ -237,6 +241,7 @@
 
 	<script type="text/javascript" src="1.promotion.bundle.js"></script>
 	<script type="text/javascript" src="promotion.bundle.js"></script>
+	<script src="select.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,7 @@
 
 $( document ).ready(function() {
+  
+ 
     $h_slider_options =  {
       gallery: true,
       item: 1,
@@ -37,6 +39,7 @@ $( document ).ready(function() {
       "</button>",
     }
   }); 
+    
 });
 
 $(function() {
