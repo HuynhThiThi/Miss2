@@ -47,10 +47,10 @@
 								</ul>
 							</div>
 						</div>
-						<div class="main">
+						<div class="main pm__module pm__vote-module">
 							<div class="main__header main-info">
-								<a href="#" class="btni btni--back desktop">TRỞ VỀ</a>
-								<h1 class="title title--infoDetail">ĐĂNG KÝ DỰ THI</h1>
+								<a href="#" class="btni btni--back desktop pm__homemodule-menu">TRỞ VỀ</a>
+								<h1 class="title title--infoDetail">THÔNG TIN THSI SINH</h1>
 								<a href="#popup_rules" data-lightbox class="btni btni--rules desktop">THỂ LỆ</a>
 							</div>
 							<div class="main__content">
@@ -58,70 +58,71 @@
 									<form action="#" method="post" class="block-vote">
 										<fieldset>
 											<!--cot hinh anh-->
-											<div class="block-img">												
+											<div class="block-img">
 												<ul id="lightSlider">
-													<li data-thumb="assets/images/data/info-1.png">
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-1.png">
 														<img src="assets/images/data/info-1.png" alt="ánh chính" />
-														<a href="assets/images/data/info-1.png" data-fancybox="gallery" class="icon">															
+														<a href="assets/images/data/info-1.png" data-fancybox="gallery"
+															class="icon">
 														</a>
 													</li>
-													<li data-thumb="assets/images/bg/bg-horizontal.png">
-														<img src="assets/images/bg/bg-horizontal.png" alt="ánh chính" />
-														<a href="assets/images/bg/bg-horizontal.png" data-fancybox="gallery" class="icon">
-															
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-2.png">
+														<img src="assets/images/data/info-2.png" alt="ánh chính" />
+														<a href="assets/images/data/info-2.png" data-fancybox="gallery"
+															class="icon">
 														</a>
 													</li>
-													<li data-thumb="assets/images/data/info-3.png">
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-3.png">
 														<img src="assets/images/data/info-3.png" alt="ánh chính" />
-														<a href="assets/images/data/info-3.png" data-fancybox="gallery" class="icon">
-															
+														<a href="assets/images/data/info-3.png" data-fancybox="gallery"
+															class="icon">
 														</a>
 													</li>
-													<li data-thumb="assets/images/data/info-4.png">
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-4.png">
 														<img src="assets/images/data/info-4.png" alt="ánh chính" />
-														<a href="assets/images/data/info-4.png" data-fancybox="gallery" class="icon">
-															
+														<a href="assets/images/data/info-4.png" data-fancybox="gallery"
+															class="icon">
 														</a>
 													</li>
 												</ul>
 												<div>
-													
 												</div>
 											</div>
 											<!--end cot hinh anh-->
 											<!--cot thong tin-->
 											<div class="block-info">
-
-
 												<ul class="list-info">
 													<li>
 														<div class="d-flex">
 															<div class="title-info">Nhân Vật</div>
-															<strong>TranNguyenKimChi</strong>
+															<strong class="pm__info-CharacterName">TranNguyenKimChi</strong>
 														</div>
-
 													</li>
 													<li>
 														<div class="d-flex">
-															<div class="title-info">Bang Hội</div><strong>Võ Lâm Minh
+															<div class="title-info">Bang Hội</div><strong class="pm__info-FamilyName">Võ Lâm Minh
 																Chủ</strong>
 														</div>
 														<div class="d-flex">
-															<div class="title-info">SBD</div><strong>12345</strong>
+															<div class="title-info">SBD</div><strong class="pm__info-ID">12345</strong>
 														</div>
 													</li>
 													<li>
 														<div class="d-flex">
-															<div class="title-info">Máy chủ</div><strong>Độc cô</strong>
+															<div class="title-info">Máy chủ</div><strong class="pm__info-ServerName">Độc cô</strong>
 														</div>
 														<div class="d-flex">
-															<div class="title-info">Game</div><strong>Võ Lâm Truyền Kỳ
+															<div class="title-info">Game</div><strong class="pm__info-Game">Võ Lâm Truyền Kỳ
 																Mobile</strong>
 														</div>
 													</li>
 													<li>
 														<label class="title-info">Lời giới thiệu</label>
-														<p class="text-note-info">Lorem ipsum dolor sit amet,
+														<p class="text-note-info pm__info-Introduction">Lorem ipsum dolor sit amet,
 															consectetur adipiscing elit, sed do eiusmod tempor
 															incididunt ut labore et dolore magna aliqua. Quis ipsum
 															suspendisse ultrices gravida. Risus commodo viverra maecenas
@@ -136,8 +137,8 @@
 															<li>
 																<div class="candidate__label label-vote">Đã được bình
 																	chọn</div>
-																<div class="candidate__value">
-																	192.999
+																<div class="candidate__value">																	
+																	<span class="pm__info-VoteTimes">192.999</span>
 																	<span class="heart">heart</span>
 																</div>
 															</li>
@@ -147,49 +148,45 @@
 																	<span>Hạng</span>
 																</div>
 																<div class="candidate__value">
-																	1000
+																	<span>1000</span>
 																</div>
 															</li>
 														</ul>
 													</div>
 													<div class="candidate__video">
-														<a href="https://www.youtube.com/watch?v=Xlvr4A4hmhM" 
-															data-fancybox class="btni btni--video">VIDEO</a>
+														<a href="https://www.youtube.com/watch?v=Xlvr4A4hmhM"
+															data-fancybox class="btni btn-video pm__info-Youtube">VIDEO</a>
 													</div>
 												</div>
 
 												<hr class="candidate__hr">
-
 												<div class="candidate__action">
 													<ul class="candidate__action--grid">
 														<li>
-															<div>Hiện có trong hành trang:</div>
+															<div class="candidate__action--text">Hiện có trong hành trang:</div>
 															<div class="d-flex justify-content-center">
-																<span class="value-heart">99999</span>
+																<span class="value-heart pm__point-available">99999</span>
 																<span class="heart">heart</span>
 															</div>
 
 														</li>
 														<li>
-															<div>Số Hoa Muốn Tặng:</div>
+															<div class="candidate__action--text">Số Hoa Muốn Tặng:</div>
 															<div>
 																<span class="candidate__vote_adjustment">
-																	<button class="btni btni--sub">SUB</button>
-																	<input type="number" name="" id="" value="1">
-																	<button class="btni btni--add">ADD</button>
+																	<button class="btni btni--sub pm__btn-vote-point-minus">SUB</button>
+																	<input class="pm__vote-point" type="number" name="pm__vote-point" id="" value="1">
+																	<button class="btni btni--add pm__btn-vote-point-add">ADD</button>
 																</span>
 															</div>
 
 														</li>
 													</ul>
 													<div class="btn-form">
-														<a href="#" class="btni btni--action">Tặng tim</a>
-														<a href="#" class="btni btni--history">TẶNG TIM</a>
+														<a href="#" class="btni btni--action pm__btn-vote">Tặng hoa</a>
+														<a href="#" class="btni btni--history">Lịch sử tặng</a>
 
-													</div>
-													<p>
-
-													</p>
+													</div>												
 												</div>
 											</div>
 										</fieldset>
@@ -201,44 +198,44 @@
 				</div>
 			</div>
 		</section>
-<!-- POPUP THỂ LỆ -->
-<div id="popup_rules" class="popup popup--default ">
-	<div class="popup__background"></div>
-	<div class="popup__content  ">
-		<div class="popup__wrapper">
-			<h2 class="title title--auth">
-				Thể Lệ
-			</h2>
-			<div class="popup__iframe">
-				<iframe src="../article/article.html" frameborder="0"></iframe>
+		<!-- POPUP THỂ LỆ -->
+		<div id="popup_rules" class="popup popup--default ">
+			<div class="popup__background"></div>
+			<div class="popup__content  ">
+				<div class="popup__wrapper">
+					<h2 class="title title--auth">
+						Thể Lệ
+					</h2>
+					<div class="popup__iframe">
+						<iframe src="../article/article.html" frameborder="0"></iframe>
 
 
+					</div>
+				</div>
+				<span class="popup__close close">X</span>
 			</div>
 		</div>
-		<span class="popup__close close">X</span>
-	</div>
-</div>
-<!-- POPUP thông báo -->
-<div id="popup_agree" class="popup popup--default pm__module pm__condition-module">
-	<div class="popup__background"></div>
-	<div class="popup__content">
-		<div class="popup__wrapper">
-			<h2 class="title title--info">
-				Thông báo
-			</h2>
-			<div class="tab-content">
-				<p>Bài thi đang được xét duyệt</p>
-			</div>
-			<div class="tab-submit">
-				<div  class="btni btn-ok">Ok</div>
-			</div>
+		<!-- POPUP thông báo -->
+		<div id="popup_agree" class="popup popup--default pm__module pm__condition-module">
+			<div class="popup__background"></div>
+			<div class="popup__content">
+				<div class="popup__wrapper">
+					<h2 class="title title--info">
+						Thông báo
+					</h2>
+					<div class="tab-content">
+						<p>Bài thi đang được xét duyệt</p>
+					</div>
+					<div class="tab-submit">
+						<div class="btni btn-ok">Ok</div>
+					</div>
 
+				</div>
+
+			</div>
+			<span class="popup__close close">X</span>
 		</div>
-
 	</div>
-	<span class="popup__close close">X</span>
-</div>
-</div>
 	</div>
 	<script type="text/javascript" src="1.promotion.bundle.js"></script>
 	<script type="text/javascript" src="promotion.bundle.js"></script>

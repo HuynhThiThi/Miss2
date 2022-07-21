@@ -8,7 +8,132 @@
 	<link href="1.promotion.css" rel="stylesheet">
 	<link href="promotion.css" rel="stylesheet">
 </head>
+<style>
+	.filter li select option {color: #000;}
 
+	img.active {
+		display: inline !important;
+	}
+	
+	.pm__hide-MediaImage.hide,
+	.pm__hide-IdentityImage.hide {
+		display: none !important;
+	}
+	.rank__detail table {
+		width: 100%;
+		font-size:30px;
+		border-radius:20px;
+		overflow:hidden;
+		border:2px solid #FFF;
+		background:#FFF
+	}
+	.rank__detail table th, .rank__detail table td
+	{
+		vertical-align:middle;
+		padding:12px;
+		text-align:center
+	}
+	.rank__detail table td
+	{
+		height:60px;
+		border:2px solid #FFF;
+		position:relative;
+		font-weight:lighter
+	}
+	.rank__detail table thead th
+	{
+		height:65px;
+		background:#ff2f6a;
+		color:#fff;
+		text-transform:uppercase;
+		border:2px solid #FFF
+	}
+	.rank__detail table tbody tr
+	{
+		position:relative;
+		border:2px solid #FFF
+	}
+	.rank__detail table tbody tr:nth-child(odd)
+	{
+		background:#f3f8ff
+	}
+	.rank__detail table tbody tr:nth-child(even)
+	{
+		background:#dfebff
+	}
+
+	.pagination .page-item .page-next,
+	.pagination .page-item .page-back {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		padding: 12px 18px;
+		border: 2px solid #c7ddfb;
+		background: transparent;
+		color: #FFF;
+		border-radius: 8px;
+		font-size: 24px;
+		min-width: 32px
+	}
+
+	.pagination .page-item:not(.active):hover .page-next, 
+	.pagination .page-item:not(.active):hover .page-back {
+		background: #ff2f6a
+	}
+	.pm__module.pm__rank-module .btni--receive {
+		margin-right: unset !important;
+	}
+
+	.candidate__video .pm__info-Youtube.off {
+		display: none;
+	}
+
+	.list-candidate .candidate-item--top {
+	background: #e2daff;
+	}
+	.content-tab .btn-see-more {
+	cursor: pointer;
+	}
+	.list-candidate .candidate-item--top .candidate-thumb {
+	object-fit: contain;
+	}
+	.register .thumb-big img, .user-detail .block-img .thumb-big img, .user-detail .block-img .list-upload li a img {
+	object-fit: contain;
+	}
+	.register .list-upload img, .candidate__thumbnail img {
+	object-fit: contain;
+		width: 100%;
+		height: 100%;
+	}
+
+	.btni--video {
+		background-image: url(//img.zing.vn/upload/jx1m/source/News/News/2021/T8/play.png);
+		background-position: unset;
+		background-size: contain;
+		width: 130px;
+		height: 130px;
+		float: left;
+		margin-left:20px;
+	}
+
+	.btni--votevideo {
+		float: right;
+		width: 280px;
+		height: 130px;
+		background-image: url(//img.zing.vn/upload/jx1m/source/News/News/2021/T8/vote-video.png);
+		background-size: contain;
+		margin-left: 20px;
+	}
+
+
+	@media (orientation: portrait) {
+		.btni--receive {
+			margin-top: unset !important;
+			margin-left: 20px;
+		}
+	}
+</style>
 <body>
 
 	<div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
@@ -22,26 +147,26 @@
 					<div class="frame1__inner">
 						<div id="topfloat" class="topfloat ">
 							<div id="topnav" class="topnav ">
-								<ul>
-									<li>
-										<a href="#" class="topnav__item">
-											DANH SÁCH
-										</a>
-									</li>
-									<li>
-										<a href="#" class="topnav__item active">
-											ĐĂNG KÝ
-										</a>
-									</li>
-									<li>
-										<a href="#" class="topnav__item">
-											XẾP HẠNG
-										</a>
-									</li>
-								</ul>
-							</div>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="topnav__item pm__homemodule-menu">
+                                    DANH SÁCH
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="topnav__item pm__candidateinfomodule-menu">
+                                    ĐĂNG KÝ
+                                </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="topnav__item pm__rankmodule-menu">
+                                    XẾP HẠNG
+                                </a>
+                                    </li>
+                                </ul>
+                            </div>
 						</div>
-						<div class="main">
+						<div class="main pm__module pm__candidateinfo-module">
 							<div class="main__header">
 								<h1 class="title title--register">ĐĂNG KÝ DỰ THI</h1>
 								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
@@ -49,42 +174,38 @@
 							</div>
 							<div class="main__content">
 								<div class="register">
-									<form action="#" method="post" class="block-register">
+									<form id="pm__profile-form" action="#" method="post" enctype="multipart/form-data" class="block-register">
 										<fieldset>
 											<!--cot hinh anh-->
 											<div class="block-img">
 												<div class="thumb-big" id="img-big">
-													<input class="upload" name="data[img-user-1]" id="img-user-1"
-														type="file">
+													<input class="upload" name="MediaImage[0]" id="img-user-1" type="file">
 													<div class="note-img-big">
 														<h2 class="text-uppercase">Thêm ảnh dự thi chính</h2>
 														<div>Kích thước đề xuất: 1920x1080</div>
 													</div>
-													<img class="uploadImg" src="#" alt="" />
-													<label for="img-user-1" class="btn-upload">
+													<img class="uploadImg" name="MediaImage[0]"src="#" alt="" />
+													<label for="img-user-1" class="btn-upload pm__hide-MediaImage">
 													</label>
 												</div>
 
 												<ul class="list-upload" id="img-user">
 													<li>
-														<input class="upload" name="data[img-user-2]" id="img-user-2"
-															type="file">
-														<img class="uploadImg" src="#" alt="" />
-														<label for="img-user-2" class="btn-upload">Thêm ảnh phụ</label>
+														<input class="upload" name="MediaImage[1]" id="img-user-2" type="file">
+                                                        <img class="uploadImg pm__img-MediaImage" src="#" alt="" />
+                                                        <label for="img-user-2" class="btn-upload pm__hide-MediaImage">Thêm ảnh phụ</label>
 														<div class="close-upload"></div>
 													</li>
 													<li>
-														<input class="upload" name="data[img-user-3]" id="img-user-3"
-															type="file">
-														<img class="uploadImg" src="#" alt="" />
-														<label for="img-user-3" class="btn-upload">Thêm ảnh phụ</label>
+														<input class="upload" name="MediaImage[2]" id="img-user-3" type="file">
+                                                        <img class="uploadImg pm__img-MediaImage" src="#" alt="" />
+                                                        <label for="img-user-3" class="btn-upload pm__hide-MediaImage">Thêm ảnh phụ</label>
 														<div class="close-upload"></div>
 													</li>
 													<li>
-														<input class="upload" name="data[img-user-4]" id="img-user-4"
-															type="file">
-														<img class="uploadImg" src="#" alt="" />
-														<label for="img-user-4" class="btn-upload">Thêm ảnh phụ</label>
+														<input class="upload" name="MediaImage[3]" id="img-user-4" type="file">
+                                                        <img class="uploadImg pm__img-MediaImage" src="#" alt="" />
+                                                        <label for="img-user-4" class="btn-upload pm__hide-MediaImage">Thêm ảnh phụ</label>
 														<div class="close-upload"></div>
 													</li>
 												</ul>
@@ -97,55 +218,51 @@
 													<li>
 														<div class="d-flex">
 															<div class="title-info">Nhân Vật</div>
-															<strong>TranNguyenKimChi</strong>
+															<strong class="pm__info-CharacterName">TranNguyenKimChi</strong>
 														</div>
 
 													</li>
 													<li>
 														<div class="d-flex">
-															<div class="title-info">Bang Hội</div><strong>Võ Lâm Minh
-																Chủ</strong>
+															<div class="title-info">Bang Hội</div>
+															<strong class="pm__info-FamilyName">Võ Lâm Minh Chủ</strong>
+																
 														</div>
 													</li>
 													<li>
 														<div class="d-flex">
-															<div class="title-info">Máy chủ</div><strong>Độc cô</strong>
+															<div class="title-info">Máy chủ</div><strong class="pm__info-ServerName">Độc cô</strong>
 														</div>
 														<div class="d-flex">
-															<div class="title-info">Game</div><strong>Võ Lâm Truyền Kỳ
-																Mobile</strong>
+															<div class="title-info">Game</div>
+															<strong class="pm__info-Game">Võ Lâm Truyền Kỳ Mobile</strong>																
 														</div>
 													</li>
 													<li>
-
-
 														<div class="list-gender">
-															<input type="radio" name="data[sex]" id="female"
-																class="input-hidden" />
+															<input type="radio" name="Sex" id="female" value="F" class="input-hidden" />
 															<label class="" for="female">
 																<span class="icon-female">Nữ</span>
 															</label>
-															<input type="radio" name="data[sex]" id="male"
-																class="input-hidden" />
+															<input type="radio" name="Sex" id="male" value="M" class="input-hidden"/>
 															<label class="" for="male">
 																<span class="icon-male">Nữ</span>
 															</label>
-
 														</div>
 													</li>
-													<li>
-														<input type="text" name="data[address]"
-															placeholder="Nhập địa chỉ liên hệ nhận thưởng">
+													<li id="Address">
+														<input type="text" name="Address" data-msg_invalid="Vui lòng nhập Địa chỉ hiện tại."
+															placeholder="Nhập địa chỉ liên hệ nhận thưởng" >
 													</li>
-													<li>
-														<input type="text" name="data[phone]"
+													<li id="Phone">
+														<input type="text" name="Phone" data-msg_invalid="Vui lòng nhập Số Điện Thoại."
 															placeholder="Số Điện Thoại">
-														<select name="" id=""
+														<select name="Area" id="Area" data-msg_invalid="Vui lòng chọn khu vực."
 															class="cs-select cs-select-custom select-area">
 															<option value="" selected disabled>Chọn khu vực</option>
 															<option value="B">Miền Bắc</option>
-															<option value="T">Miền Trung</option>
-															<option value="N">Miền Nam</option>
+                                                            <option value="T">Miền Trung</option>
+                                                            <option value="N">Miền Nam</option>
 														</select>
 													</li>
 													<li>
@@ -153,30 +270,28 @@
 															sau)</p>
 														<ul class="list-upload2" id="img-id">
 															<li>
-																<input class="upload" name="data[img-id-front]"
-																	id="img-id-front" type="file"
+																<input class="upload" name="IdentityImage[0]" id="img-id-front" type="file"
 																	placeholder="Mặt trước">
 																<p class="note-cnnd">Mặt trước</p>
-																<img class="uploadImg" src="#" alt="" />
-																<label for="img-id-front" class="btn-upload">Chọn
+																<img class="uploadImg pm__img-IdentityImage" src="#" alt="" />
+																<label for="img-id-front" class="btn-upload pm__hide-IdentityImage">Chọn
 																	Ảnh</label>
 															</li>
 															<li>
-																<input class="upload" name="data[img-id-back]"
-																	id="img-id-back" type="file">
+																<input class="upload" name="IdentityImage[1]" id="img-id-back" type="file">
 																<p class="note-cnnd">Mặt sau</p>
-																<img class="uploadImg" src="#" alt="" />
-																<label for="img-id-back" class="btn-upload">Chọn
+																<img class="uploadImg pm__img-IdentityImage" src="#" alt="" />
+																<label for="img-id-back" class="btn-upload pm__hide-IdentityImage">Chọn
 																	Ảnh</label>
 															</li>
 														</ul>
 													</li>
-													<li>
-														<textarea id="intro" name="data[intro]" row="10"
-															placeholder="Nhập nội dung tự giới thiệu (không quá 300 ký tự)"></textarea>
+													<li id="Introduction">
+														<textarea id="intro" name="Introduction" row="10"
+														ata-msg_invalid="Vui lòng nhập tự giới thiệu." placeholder="Nhập nội dung tự giới thiệu (không quá 300 ký tự)"></textarea>
 													</li>
-													<li>
-														<input type="url" name="data[url]"
+													<li id="Youtube">
+														<input type="url" name="Youtube" data-msg_invalid="Vui lòng nhập link video dự thi."
 															placeholder="Nhập link video dự thi">
 													</li>
 												</ul>
@@ -218,7 +333,7 @@
 			</div>
 		</div>
 		<!-- POPUP thông báo -->
-		<div id="popup_agree" class="popup popup--default pm__module pm__condition-module">
+		<div id="popup_agree" class="popup_agree popup popup--default pm__module pm__condition-module">
 			<div class="popup__background"></div>
 			<div class="popup__content">
 				<div class="popup__wrapper">
@@ -231,9 +346,25 @@
 					<div class="tab-submit">
 						<div class="btni btn-ok">Ok</div>
 					</div>
-
 				</div>
-
+			</div>
+			<span class="popup__close close">X</span>
+		</div>
+		<!-- POPUP thông báo vi phạm-->
+		<div id="popup_offending_post" class="popup_agree popup popup--default pm__module pm__condition-module active">
+			<div class="popup__background"></div>
+			<div class="popup__content">
+				<div class="popup__wrapper">
+					<h2 class="title title--info">
+						Thông báo
+					</h2>
+					<div class="tab-content">
+						<p>Bài thi vi phạm quy định, vui lòng đăng ký lại</p>
+					</div>
+					<div class="tab-submit">
+						<div class="btni btn-ok">Ok</div>
+					</div>
+				</div>
 			</div>
 			<span class="popup__close close">X</span>
 		</div>

@@ -8,7 +8,132 @@
 	<link href="1.promotion.css" rel="stylesheet">
 	<link href="promotion.css" rel="stylesheet">
 </head>
+<style>
+	.filter li select option {color: #000;}
 
+	img.active {
+		display: inline !important;
+	}
+	
+	.pm__hide-MediaImage.hide,
+	.pm__hide-IdentityImage.hide {
+		display: none !important;
+	}
+	.rank__detail table {
+		width: 100%;
+		font-size:30px;
+		border-radius:20px;
+		overflow:hidden;
+		border:2px solid #FFF;
+		background:#FFF
+	}
+	.rank__detail table th, .rank__detail table td
+	{
+		vertical-align:middle;
+		padding:12px;
+		text-align:center
+	}
+	.rank__detail table td
+	{
+		height:60px;
+		border:2px solid #FFF;
+		position:relative;
+		font-weight:lighter
+	}
+	.rank__detail table thead th
+	{
+		height:65px;
+		background:#ff2f6a;
+		color:#fff;
+		text-transform:uppercase;
+		border:2px solid #FFF
+	}
+	.rank__detail table tbody tr
+	{
+		position:relative;
+		border:2px solid #FFF
+	}
+	.rank__detail table tbody tr:nth-child(odd)
+	{
+		background:#f3f8ff
+	}
+	.rank__detail table tbody tr:nth-child(even)
+	{
+		background:#dfebff
+	}
+
+	.pagination .page-item .page-next,
+	.pagination .page-item .page-back {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		padding: 12px 18px;
+		border: 2px solid #c7ddfb;
+		background: transparent;
+		color: #FFF;
+		border-radius: 8px;
+		font-size: 24px;
+		min-width: 32px
+	}
+
+	.pagination .page-item:not(.active):hover .page-next, 
+	.pagination .page-item:not(.active):hover .page-back {
+		background: #ff2f6a
+	}
+	.pm__module.pm__rank-module .btni--receive {
+		margin-right: unset !important;
+	}
+
+	.candidate__video .pm__info-Youtube.off {
+		display: none;
+	}
+
+	.list-candidate .candidate-item--top {
+	background: #e2daff;
+	}
+	.content-tab .btn-see-more {
+	cursor: pointer;
+	}
+	.list-candidate .candidate-item--top .candidate-thumb {
+	object-fit: contain;
+	}
+	.register .thumb-big img, .user-detail .block-img .thumb-big img, .user-detail .block-img .list-upload li a img {
+	object-fit: contain;
+	}
+	.register .list-upload img, .candidate__thumbnail img {
+	object-fit: contain;
+		width: 100%;
+		height: 100%;
+	}
+
+	.btni--video {
+		background-image: url(//img.zing.vn/upload/jx1m/source/News/News/2021/T8/play.png);
+		background-position: unset;
+		background-size: contain;
+		width: 130px;
+		height: 130px;
+		float: left;
+		margin-left:20px;
+	}
+
+	.btni--votevideo {
+		float: right;
+		width: 280px;
+		height: 130px;
+		background-image: url(//img.zing.vn/upload/jx1m/source/News/News/2021/T8/vote-video.png);
+		background-size: contain;
+		margin-left: 20px;
+	}
+
+
+	@media (orientation: portrait) {
+		.btni--receive {
+			margin-top: unset !important;
+			margin-left: 20px;
+		}
+	}
+</style>
 <body>
 	<div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
 		<section id="frame1" class="section section--frame1 frame1 scrollFrame">
@@ -41,7 +166,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="main">
+						<div class="main pm__module pm__rank-module">
 							<div class="main__header">
 								<h1 class="title title--rank">ĐĂNG KÝ DỰ THI</h1>
 								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
@@ -49,7 +174,7 @@
 							</div>
 							<div class="main__content">
 
-								<div class="rank">	
+								<div class="rank pm__rank-content">	
 
 									<div class="rank__filter">
 										
@@ -62,7 +187,7 @@
 											</li>
 										</ul>
 									</div>
-									<div class="rank__detail">
+									<div class="rank__content--detail">
 										<table width="100%" class="rank__table">
 											<thead>
 												<tr>
@@ -74,28 +199,22 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr class="rank-1">
-													<td>
-														<img src="./assets/images/icon/top1.png" alt="top 1">
-													</td>
+												<tr>
+													<td>1</td>
 													<td>Nguyễn Trần Mạnh Hoàng </td>
 													<td class="desktop">Độc cô bang</td>
 													<td class="desktop">S22</td>
 													<td>32000</td>
 												</tr>
-												<tr class="rank-2">
-													<td>
-														<img src="./assets/images/icon/top2.png" alt="top 2">
-													</td>
+												<tr>
+													<td>2</td>
 													<td>Nguyễn Trần Mạnh Hoàng </td>
 													<td class="desktop">Độc cô bang</td>
 													<td class="desktop">S22</td>
 													<td>32000</td>
 												</tr>
-												<tr class="rank-3">
-													<td>
-														<img src="./assets/images/icon/top3.png" alt="top 3">
-													</td>
+												<tr>
+													<td>3</td>
 													<td>Nguyễn Trần Mạnh Hoàng </td>
 													<td class="desktop">Độc cô bang</td>
 													<td class="desktop">S22</td>
@@ -151,46 +270,45 @@
 													<td>32000</td>
 												</tr>
 											</tbody>
-										</table>
-										<nav>
-											<ul class="pagination">
-												<li class="page-item btn-first">
-													<a class="page-link" href="">
-														Đầu
-													</a>
-												</li>
-												<li class="page-item btn-prev">
-													<a class="page-link" href="" aria-label="Previous">
-														<span aria-hidden="true">Trang trước</span>
-													</a>
-												</li>
-												<li class="page-item btn-number">
-													<a class="page-link" href="">1</a>
-												</li>
-												<li class="page-item btn-number active">
-													<a class="page-link" href="">2</a>
-												</li>
-												<li class="page-item btn-number">
-													<a class="page-link" href="">3</a>
-												</li>
-												<li class="page-item btn-number">
-													<a class="page-link" href="">4</a>
-												</li>
-												<li class="page-item btn-next">
-													<a class="page-link" href="" aria-label="Next">
-														<span aria-hidden="true">Trang Sau</span>
-
-													</a>
-												</li>
-												<li class="page-item btn-last">
-													<a class="page-link" href="">
-														Cuối
-													</a>
-												</li>
-											</ul>
-										</nav>
+										</table>										
 									</div>
 								</div>
+								<nav>
+									<ul class="pagination">
+										<li class="page-item btn-first">
+											<a class="page-link" href="">
+												Đầu
+											</a>
+										</li>
+										<li class="page-item btn-prev">
+											<a class="page-link" href="" aria-label="Previous">
+												<span aria-hidden="true">Trang trước</span>
+											</a>
+										</li>
+										<li class="page-item btn-number">
+											<a class="page-link" href="">1</a>
+										</li>
+										<li class="page-item btn-number active">
+											<a class="page-link" href="">2</a>
+										</li>
+										<li class="page-item btn-number">
+											<a class="page-link" href="">3</a>
+										</li>
+										<li class="page-item btn-number">
+											<a class="page-link" href="">4</a>
+										</li>
+										<li class="page-item btn-next">
+											<a class="page-link" href="" aria-label="Next">
+												<span aria-hidden="true">Trang Sau</span>
+											</a>
+										</li>
+										<li class="page-item btn-last">
+											<a class="page-link" href="">
+												Cuối
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
 						</div>
 					</div>

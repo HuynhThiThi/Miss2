@@ -1,47 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promotion - Web Platform 3.0</title>
-    <link href="1.promotion.css" rel="stylesheet">
-    <link href="promotion.css" rel="stylesheet">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Promotion - Web Platform 3.0</title>
+	<link href="1.promotion.css" rel="stylesheet">
+	<link href="promotion.css" rel="stylesheet">
+    <link rel='stylesheet' href='https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css'>
 </head>
+<style>
+	.filter li select option {color: #000;}
 
+	img.active {
+		display: inline !important;
+	}
+	
+	.pm__hide-MediaImage.hide,
+	.pm__hide-IdentityImage.hide {
+		display: none !important;
+	}
+	.rank__detail table {
+		width: 100%;
+		font-size:30px;
+		border-radius:20px;
+		overflow:hidden;
+		border:2px solid #FFF;
+		background:#FFF
+	}
+	.rank__detail table th, .rank__detail table td
+	{
+		vertical-align:middle;
+		padding:12px;
+		text-align:center
+	}
+	.rank__detail table td
+	{
+		height:60px;
+		border:2px solid #FFF;
+		position:relative;
+		font-weight:lighter
+	}
+	.rank__detail table thead th
+	{
+		height:65px;
+		background:#ff2f6a;
+		color:#fff;
+		text-transform:uppercase;
+		border:2px solid #FFF
+	}
+	.rank__detail table tbody tr
+	{
+		position:relative;
+		border:2px solid #FFF
+	}
+	.rank__detail table tbody tr:nth-child(odd)
+	{
+		background:#f3f8ff
+	}
+	.rank__detail table tbody tr:nth-child(even)
+	{
+		background:#dfebff
+	}
+
+	.pagination .page-item .page-next,
+	.pagination .page-item .page-back {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		padding: 12px 18px;
+		border: 2px solid #c7ddfb;
+		background: transparent;
+		color: #FFF;
+		border-radius: 8px;
+		font-size: 24px;
+		min-width: 32px
+	}
+
+	.pagination .page-item:not(.active):hover .page-next, 
+	.pagination .page-item:not(.active):hover .page-back {
+		background: #ff2f6a
+	}
+	.pm__module.pm__rank-module .btni--receive {
+		margin-right: unset !important;
+	}
+
+	.candidate__video .pm__info-Youtube.off {
+		display: none;
+	}
+
+	.list-candidate .candidate-item--top {
+	background: #e2daff;
+	}
+	.content-tab .btn-see-more {
+	cursor: pointer;
+	}
+	.list-candidate .candidate-item--top .candidate-thumb {
+	object-fit: contain;
+	}
+	.register .thumb-big img, .user-detail .block-img .thumb-big img, .user-detail .block-img .list-upload li a img {
+	object-fit: contain;
+	}
+	.register .list-upload img, .candidate__thumbnail img {
+	object-fit: contain;
+		width: 100%;
+		height: 100%;
+	}
+
+	.btni--video {
+		background-image: url(//img.zing.vn/upload/jx1m/source/News/News/2021/T8/play.png);
+		background-position: unset;
+		background-size: contain;
+		width: 130px;
+		height: 130px;
+		float: left;
+		margin-left:20px;
+	}
+
+	.btni--votevideo {
+		float: right;
+		width: 280px;
+		height: 130px;
+		background-image: url(//img.zing.vn/upload/jx1m/source/News/News/2021/T8/vote-video.png);
+		background-size: contain;
+		margin-left: 20px;
+	}
+
+
+	@media (orientation: portrait) {
+		.btni--receive {
+			margin-top: unset !important;
+			margin-left: 20px;
+		}
+	}
+</style>
 <body>
 
-    <div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
-        <section id="frame1" class="section section--frame1 frame1 scrollFrame">
-            <div class="section__background">
-                <img data-src="assets/images/bg/bg-horizontal.png" class="desktop lazyload" alt="">
-                <img data-src="assets/images/bg/bg-vertical.png" class="mobile lazyload" alt="">
-            </div>
-            <div class="section__content">
-                <div class="container">
-                    <div class="frame1__inner">
-                        <div id="topfloat" class="topfloat ">
-                            <div id="topnav" class="topnav ">
+	<div id="wrapper" class="wrapper wrapper--landing floatingDesktopTopLeft floatingMobileTopLeft">
+		<section id="frame1" class="section section--frame1 frame1 scrollFrame">
+			<div class="section__background">
+				<img src="assets/images/bg/bg-horizontal-resgiter.png" class="desktop lazyload" alt="">
+				<img src="assets/images/bg/bg-vertical.png" class="mobile lazyload" alt="">
+			</div>
+			<div class="section__content">
+				<div class="container">
+					<div class="frame1__inner">
+						<div id="topfloat" class="topfloat ">
+							<div id="topnav" class="topnav ">
                                 <ul>
                                     <li>
-                                        <a href="#" class="topnav__item">
-                                            DANH SÁCH
-                                        </a>
+                                        <a href="#" class="topnav__item pm__homemodule-menu active">
+                                    DANH SÁCH
+                                </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="topnav__item active">
-                                            ĐĂNG KÝ
-                                        </a>
+                                        <a href="#" class="topnav__item pm__candidateinfomodule-menu">
+                                    ĐĂNG KÝ
+                                </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="topnav__item">
-                                            XẾP HẠNG
-                                        </a>
+                                        <a href="#" class="topnav__item pm__rankmodule-menu">
+                                    XẾP HẠNG
+                                </a>
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="main pm__module pm__home-module">
+						</div>
+                         <!-- DANH SÁCH THÍ SINH -->
+                         <div class="main pm__module pm__home-module"  style="display:none">
                             <div class="main__header">
                                 <h1 class="title title--list">DANH SÁCH THÍ SINH</h1>
                                 <a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
@@ -438,32 +564,505 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="popup_rules" class="popup popup--default">
-            <div class="popup__background"></div>
-            <div class="popup__content">
-                <div class="popup__wrapper">
-                    <h2 class="title title--auth">
-                        Thể Lệ
-                    </h2>
-                    <div class="popup__iframe">
-                        <iframe src="../article/article.html" frameborder="0"></iframe>
-                    </div>
-                </div>
-                <span class="popup__close close">X</span>
-            </div>
-        </div>
-    </div>
+                        <!-- ĐĂNG KÝ DỰ THI -->
+						<div class="main pm__module pm__candidateinfo-module" style="display:none">
+							<div class="main__header">
+								<h1 class="title title--register">ĐĂNG KÝ DỰ THI</h1>
+								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
+									LỆ</a>
+							</div>
+							<div class="main__content">
+								<div class="register">
+									<form id="pm__profile-form" action="#" method="post" enctype="multipart/form-data" class="block-register">
+										<fieldset>
+											<!--cot hinh anh-->
+											<div class="block-img">
+												<div class="thumb-big" id="img-big">
+													<input class="upload" name="MediaImage[0]" id="img-user-1" type="file">
+													<div class="note-img-big">
+														<h2 class="text-uppercase">Thêm ảnh dự thi chính</h2>
+														<div>Kích thước đề xuất: 1920x1080</div>
+													</div>
+													<img class="uploadImg" name="MediaImage[0]"src="#" alt="" />
+													<label for="img-user-1" class="btn-upload pm__hide-MediaImage">
+													</label>
+												</div>
+
+												<ul class="list-upload" id="img-user">
+													<li>
+														<input class="upload" name="MediaImage[1]" id="img-user-2" type="file">
+                                                        <img class="uploadImg pm__img-MediaImage" src="#" alt="" />
+                                                        <label for="img-user-2" class="btn-upload pm__hide-MediaImage">Thêm ảnh phụ</label>
+														<div class="close-upload"></div>
+													</li>
+													<li>
+														<input class="upload" name="MediaImage[2]" id="img-user-3" type="file">
+                                                        <img class="uploadImg pm__img-MediaImage" src="#" alt="" />
+                                                        <label for="img-user-3" class="btn-upload pm__hide-MediaImage">Thêm ảnh phụ</label>
+														<div class="close-upload"></div>
+													</li>
+													<li>
+														<input class="upload" name="MediaImage[3]" id="img-user-4" type="file">
+                                                        <img class="uploadImg pm__img-MediaImage" src="#" alt="" />
+                                                        <label for="img-user-4" class="btn-upload pm__hide-MediaImage">Thêm ảnh phụ</label>
+														<div class="close-upload"></div>
+													</li>
+												</ul>
+												<div class="note-img">*Bắt buộc phải đăng ký đủ 4 ảnh dự thi</div>
+											</div>
+											<!--end cot hinh anh-->
+											<!--cot thong tin-->
+											<div class="block-info">
+												<ul class="list-info">
+													<li>
+														<div class="d-flex">
+															<div class="title-info">Nhân Vật</div>
+															<strong class="pm__info-CharacterName">TranNguyenKimChi</strong>
+														</div>
+
+													</li>
+													<li>
+														<div class="d-flex">
+															<div class="title-info">Bang Hội</div>
+															<strong class="pm__info-FamilyName">Võ Lâm Minh Chủ</strong>
+																
+														</div>
+													</li>
+													<li>
+														<div class="d-flex">
+															<div class="title-info">Máy chủ</div><strong class="pm__info-ServerName">Độc cô</strong>
+														</div>
+														<div class="d-flex">
+															<div class="title-info">Game</div>
+															<strong class="pm__info-Game">Võ Lâm Truyền Kỳ Mobile</strong>																
+														</div>
+													</li>
+													<li>
+														<div class="list-gender">
+															<input type="radio" name="Sex" id="female" value="F" class="input-hidden" />
+															<label class="" for="female">
+																<span class="icon-female">Nữ</span>
+															</label>
+															<input type="radio" name="Sex" id="male" value="M" class="input-hidden"/>
+															<label class="" for="male">
+																<span class="icon-male">Nữ</span>
+															</label>
+														</div>
+													</li>
+													<li id="Address">
+														<input type="text" name="Address" data-msg_invalid="Vui lòng nhập Địa chỉ hiện tại."
+															placeholder="Nhập địa chỉ liên hệ nhận thưởng" >
+													</li>
+													<li id="Phone">
+														<input type="text" name="Phone" data-msg_invalid="Vui lòng nhập Số Điện Thoại."
+															placeholder="Số Điện Thoại">
+														<select name="Area" id="Area" data-msg_invalid="Vui lòng chọn khu vực."
+															class="cs-select cs-select-custom select-area">
+															<option value="" selected disabled>Chọn khu vực</option>
+															<option value="B">Miền Bắc</option>
+                                                            <option value="T">Miền Trung</option>
+                                                            <option value="N">Miền Nam</option>
+														</select>
+													</li>
+													<li>
+														<p class="text-note">Nhập Ảnh CMND/ CCCD (mặt trước và
+															sau)</p>
+														<ul class="list-upload2" id="img-id">
+															<li>
+																<input class="upload" name="IdentityImage[0]" id="img-id-front" type="file"
+																	placeholder="Mặt trước">
+																<p class="note-cnnd">Mặt trước</p>
+																<img class="uploadImg pm__img-IdentityImage" src="#" alt="" />
+																<label for="img-id-front" class="btn-upload pm__hide-IdentityImage">Chọn
+																	Ảnh</label>
+															</li>
+															<li>
+																<input class="upload" name="IdentityImage[1]" id="img-id-back" type="file">
+																<p class="note-cnnd">Mặt sau</p>
+																<img class="uploadImg pm__img-IdentityImage" src="#" alt="" />
+																<label for="img-id-back" class="btn-upload pm__hide-IdentityImage">Chọn
+																	Ảnh</label>
+															</li>
+														</ul>
+													</li>
+													<li id="Introduction">
+														<textarea id="intro" name="Introduction" row="10"
+														ata-msg_invalid="Vui lòng nhập tự giới thiệu." placeholder="Nhập nội dung tự giới thiệu (không quá 300 ký tự)"></textarea>
+													</li>
+													<li id="Youtube">
+														<input type="url" name="Youtube" data-msg_invalid="Vui lòng nhập link video dự thi."
+															placeholder="Nhập link video dự thi">
+													</li>
+												</ul>
+												<!--end cot thong tin-->
+												<div class="btn-form">
+													<input type="submit" class="btni btni--submit show-thongbao-cancel"
+														name="btnSubmit">
+													<a href="#popup_agree" data-lightbox="">
+														<input type="submit" class="btni btni--submit show-thongbao-ok"
+															name="btnSubmit">
+													</a>
+												</div>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+                        <!-- THÔNG TIN THÍ SINH -->
+                        <div class="main pm__module pm__vote-module" style="display:none">
+							<div class="main__header main-info">
+								<a href="#" class="btni btni--back desktop pm__homemodule-menu">TRỞ VỀ</a>
+								<h1 class="title title--infoDetail">thông tin thí sinh</h1>
+								<a href="#popup_rules" data-lightbox class="btni btni--rules desktop">THỂ LỆ</a>
+							</div>
+							<div class="main__content">
+								<div class="register detail-info">
+									<form action="#" method="post" class="block-vote">
+										<fieldset>
+											<!--cot hinh anh-->
+											<div class="block-img">
+												<ul id="lightSlider">
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-1.png">
+														<img src="assets/images/data/info-1.png" alt="ánh chính" />
+														<a href="assets/images/data/info-1.png" data-fancybox="gallery"
+															class="icon">
+														</a>
+													</li>
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-2.png">
+														<img src="assets/images/data/info-2.png" alt="ánh chính" />
+														<a href="assets/images/data/info-2.png" data-fancybox="gallery"
+															class="icon">
+														</a>
+													</li>
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-3.png">
+														<img src="assets/images/data/info-3.png" alt="ánh chính" />
+														<a href="assets/images/data/info-3.png" data-fancybox="gallery"
+															class="icon">
+														</a>
+													</li>
+													<li class="pm__info-MediaImage"
+														data-thumb="assets/images/data/info-4.png">
+														<img src="assets/images/data/info-4.png" alt="ánh chính" />
+														<a href="assets/images/data/info-4.png" data-fancybox="gallery"
+															class="icon">
+														</a>
+													</li>
+												</ul>
+												<div>
+												</div>
+											</div>
+											<!--end cot hinh anh-->
+											<!--cot thong tin-->
+											<div class="block-info">
+												<ul class="list-info">
+													<li>
+														<div class="d-flex">
+															<div class="title-info">Nhân Vật</div>
+															<strong class="pm__info-CharacterName">TranNguyenKimChi</strong>
+														</div>
+													</li>
+													<li>
+														<div class="d-flex">
+															<div class="title-info">Bang Hội</div><strong class="pm__info-FamilyName">Võ Lâm Minh
+																Chủ</strong>
+														</div>
+														<div class="d-flex">
+															<div class="title-info">SBD</div><strong class="pm__info-ID">12345</strong>
+														</div>
+													</li>
+													<li>
+														<div class="d-flex">
+															<div class="title-info">Máy chủ</div><strong class="pm__info-ServerName">Độc cô</strong>
+														</div>
+														<div class="d-flex">
+															<div class="title-info">Game</div><strong class="pm__info-Game">Võ Lâm Truyền Kỳ
+																Mobile</strong>
+														</div>
+													</li>
+													<li>
+														<label class="title-info">Lời giới thiệu</label>
+														<p class="text-note-info pm__info-Introduction">Lorem ipsum dolor sit amet,
+															consectetur adipiscing elit, sed do eiusmod tempor
+															incididunt ut labore et dolore magna aliqua. Quis ipsum
+															suspendisse ultrices gravida. Risus commodo viverra maecenas
+															accumsan lacus vel facilisis.
+															Risus commodo viverra </p>
+													</li>
+												</ul>
+
+												<div class="candidate__meta">
+													<div class="candidate__statics">
+														<ul>
+															<li>
+																<div class="candidate__label label-vote">Đã được bình
+																	chọn</div>
+																<div class="candidate__value">																	
+																	<span class="pm__info-VoteTimes">192.999</span>
+																	<span class="heart">heart</span>
+																</div>
+															</li>
+															<li>
+																<div class="candidate__label label-rank d-flex">
+																	<span class="label-rank-icon">icon</span>
+																	<span>Hạng</span>
+																</div>
+																<div class="candidate__value">
+																	<span>1000</span>
+																</div>
+															</li>
+														</ul>
+													</div>
+													<div class="candidate__video">
+														<a href="https://www.youtube.com/watch?v=Xlvr4A4hmhM"
+															data-fancybox class="btni btn-video pm__info-Youtube">VIDEO</a>
+													</div>
+												</div>
+
+												<hr class="candidate__hr">
+												<div class="candidate__action">
+													<ul class="candidate__action--grid">
+														<li>
+															<div class="candidate__action--text">Hiện có trong hành trang:</div>
+															<div class="d-flex justify-content-center">
+																<span class="value-heart pm__point-available">99999</span>
+																<span class="heart">heart</span>
+															</div>
+														</li>
+														<li>
+															<div class="candidate__action--text">Số Hoa Muốn Tặng:</div>
+															<div>
+																<span class="candidate__vote_adjustment">
+																	<button class="btni btni--sub pm__btn-vote-point-minus">SUB</button>
+																	<input class="pm__vote-point" type="number" name="pm__vote-point" id="" value="1">
+																	<button class="btni btni--add pm__btn-vote-point-add">ADD</button>
+																</span>
+															</div>
+														</li>
+													</ul>
+													<div class="btn-form">
+														<a href="#" class="btni btni--action pm__btn-vote">Tặng hoa</a>
+														<a href="#" class="btni btni--history">Lịch sử tặng</a>
+
+													</div>												
+												</div>
+											</div>
+										</fieldset>
+									</form>
+								</div>
+							</div>
+						</div>
+                         <!-- DANH SÁCH XẾP HẠNG -->
+                         <div class="main pm__module pm__rank-module">
+							<div class="main__header">
+								<h1 class="title title--rank">ĐĂNG KÝ DỰ THI</h1>
+								<a href="#popup_rules" data-lightbox class="btni btni--rules btn-position desktop">THỂ
+									LỆ</a>
+							</div>
+							<div class="main__content">
+								<div class="rank pm__rank-content">	
+									<div class="rank__filter">
+										
+										<ul class="filter">
+											<li>
+												<select class="cs-select cs-select-custom" name="game" id="game">
+													<option value="" selected disabled>Chọn game</option>
+													<option value="">Võ lâm truyền kỳ 1 Mobile</option>
+												</select>
+											</li>
+										</ul>
+									</div>
+									<div class="rank__content--detail">
+										<table width="100%" class="rank__table">
+											<thead>
+												<tr>
+													<th class="stt">TOP</th>
+													<th class="nhanvat">Nhân vật</th>
+													<th class="group desktop">Bang Hội</th>
+													<th class="server desktop">Máy chủ</th>
+													<th class="flower">Hoa hồng đã tặng</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>8</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>9</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+												<tr>
+													<td>10</td>
+													<td>Nguyễn Trần Mạnh Hoàng </td>
+													<td class="desktop">Độc cô bang</td>
+													<td class="desktop">S22</td>
+													<td>32000</td>
+												</tr>
+											</tbody>
+										</table>										
+									</div>
+								</div>
+								<nav>
+									<ul class="pagination">
+										<li class="page-item btn-first">
+											<a class="page-link" href="">
+												Đầu
+											</a>
+										</li>
+										<li class="page-item btn-prev">
+											<a class="page-link" href="" aria-label="Previous">
+												<span aria-hidden="true">Trang trước</span>
+											</a>
+										</li>
+										<li class="page-item btn-number">
+											<a class="page-link" href="">1</a>
+										</li>
+										<li class="page-item btn-number active">
+											<a class="page-link" href="">2</a>
+										</li>
+										<li class="page-item btn-number">
+											<a class="page-link" href="">3</a>
+										</li>
+										<li class="page-item btn-number">
+											<a class="page-link" href="">4</a>
+										</li>
+										<li class="page-item btn-next">
+											<a class="page-link" href="" aria-label="Next">
+												<span aria-hidden="true">Trang Sau</span>
+											</a>
+										</li>
+										<li class="page-item btn-last">
+											<a class="page-link" href="">
+												Cuối
+											</a>
+										</li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- POPUP THỂ LỆ -->
+		<div id="popup_rules" class="popup popup--default">
+			<div class="popup__background"></div>
+			<div class="popup__content  ">
+				<div class="popup__wrapper">
+					<h2 class="title title--auth">
+						Thể Lệ
+					</h2>
+					<div class="popup__iframe">
+						<iframe src="../article/article.html" frameborder="0"></iframe>
 
 
+					</div>
+				</div>
+				<span class="popup__close close">X</span>
+			</div>
+		</div>
+		<!-- POPUP thông báo -->
+		<div id="popup_agree" class="popup_agree popup popup--default pm__module pm__condition-module">
+			<div class="popup__background"></div>
+			<div class="popup__content">
+				<div class="popup__wrapper">
+					<h2 class="title title--info">
+						Thông báo
+					</h2>
+					<div class="tab-content">
+						<p>Bài thi đang được xét duyệt</p>
+					</div>
+					<div class="tab-submit">
+						<div class="btni btn-ok">Ok</div>
+					</div>
+				</div>
+			</div>
+			<span class="popup__close close">X</span>
+		</div>
+		<!-- POPUP thông báo vi phạm-->
+		<div id="popup_offending_post" class="popup_agree popup popup--default pm__module pm__condition-module">
+			<div class="popup__background"></div>
+			<div class="popup__content">
+				<div class="popup__wrapper">
+					<h2 class="title title--info">
+						Thông báo
+					</h2>
+					<div class="tab-content">
+						<p>Bài thi vi phạm quy định, vui lòng đăng ký lại</p>
+					</div>
+					<div class="tab-submit">
+						<div class="btni btn-ok">Ok</div>
+					</div>
+				</div>
+			</div>
+			<span class="popup__close close">X</span>
+		</div>
+	</div>
 
-
-    <script type="text/javascript" src="1.promotion.bundle.js"></script>
-    <script type="text/javascript" src="promotion.bundle.js"></script>
-    <script src="./slider-funtion.js"></script>
+	<script type="text/javascript" src="1.promotion.bundle.js"></script>
+	<script type="text/javascript" src="promotion.bundle.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js'></script>	
+	<script type="text/javascript" src="slider-funtion.js"></script>
     <script src="select.js"></script>
 </body>
 
